@@ -149,4 +149,14 @@ a{
     color: white;
     border-radius: 4px;
     cursor: pointer;
+    height: 10px;
+}
+
+#err{
+    padding: 5px;
+    border-style: dashed;
+    border-color: red;
+    border-width: 3px;
+    color: red;
+    border-radius: 4px;
 }

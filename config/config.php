@@ -12,4 +12,29 @@
         echo 'Erro ao conectar ao banco de dados';
         echo $e;
     } 
+
+    if(isset($_REQUEST['email'])){
+        echo $email = $_REQUEST['email'];
+        echo $senha = $_REQUEST['senha'];
+
+        $sql = $pdo->prepare("SELECT * FROM usuario WHERE email = ?");
+        $sql->execute([$email]);
+
+        if($sql->rowCount() == 1){
+            $info = $sql->fetch();
+            if(password_verify($senha, $info['senha'])){
+                $_SESSION['login'] = true;
+                $_SESSION['id'] = $info['idusuario'];
+                $_SESSION['usuario'] = $info['nomeUsuario'];
+                header("Location: index.php");
+                die();
+            }else{
+                //Erro
+                echo '<div class="box_erro_login"><p><i class="fas fa-exclamation-circle"></i> Usuário ou senha incorretos!</p></div>';
+            }
+        }else{
+            //Erro
+            echo '<div class="box_erro_login"><p><i class="fas fa-exclamation-circle"></i> Usuário não encontrado.</p></div>';
+        }
+    }
 ?>
