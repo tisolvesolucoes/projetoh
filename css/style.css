@@ -1,15 +1,18 @@
 body{
     background-color: white;
-    color: #575757;
+    color: #1c1c1c;
     font-size: 1em;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 a{
-    color: #575757;
+    color: #1c1c1c;
 }
 .main{
     display: flex;
     flex-direction: column;
+}
+h1 a img{
+    width: 90px;
 }
 /* CENTER ********************************************/
 .center{
@@ -35,7 +38,7 @@ a{
     display: flex;
 }
 .header .nav li a:hover{
-    background-color: #575757;
+    background-color: #1c1c1c;
     color: white;
 }
 /* BANNER ********************************************/
@@ -77,14 +80,15 @@ a{
     min-height: 300px; 
 }
 .container-item:nth-child(even){
-    background-color:teal;
+    background-color:#4e2df8; /* #8a7816 */
+    position: relative;
     color: white; 
 }
 /* FOOTER ********************************************/
 .footer{
     padding: 20px 0;
     color: white;
-    background-color: #575757;  
+    background-color: #1c1c1c;  
 }
 /* LIGHTBOX ********************************************/
 .lightbox{
@@ -145,13 +149,33 @@ a{
 .btn{
     padding: 5px;
     border: none;
-    background: green;
+    background: rgb(27, 140, 15);
     color: white;
     border-radius: 4px;
     cursor: pointer;
-    height: 10px;
 }
+.btn-internal{
+    background-color: rgb(248, 72, 45);
+}
+.load-elements{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.elements{
 
+}
+.owl-carousel{
+    background-color:rgb(208, 212, 255);
+}
+.bg{
+    position: absolute;
+    height: 83%;
+}
+p{
+    line-height: 24px;
+    margin-bottom: 10px;
+}
 #err{
     padding: 5px;
     border-style: dashed;

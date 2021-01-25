@@ -21,7 +21,7 @@ var functionHashi = {
                     <div class="close">
                         <button onclick="functionHashi.close()">x</button>
                     </div>
-                        <form action="admin/index.php" onSubmit="limpaDiv();" method="post" name="frmLogin" id="frmLogin" target="_self"> 
+                        <form action="admin/index.php" onsubmit="return false" onSubmit="limpaDiv();" method="post" name="frmLogin" id="frmLogin" target="_self"> 
                             <div class="form-group">
                                 <label>Email: </label>
                                 <input type="email" name="email" placeholder="email" placeholder="digite seu e-mail" maxlenght="50" />
@@ -33,7 +33,10 @@ var functionHashi = {
                             </div>
 
                             <div class="form-group">
-                                <type="submit" class="btn" value="Submit" name="acao" onclick="functionHashi.login_action()">
+                                <button type="submit" class="btn" value="Submit" name="acao" onclick="functionHashi.login_action()">
+                                    <i class="fas fa-cloud-upload-alt"></i>
+                                    envia
+                                </button>
                             </div> 	
                             <div id="err" style="display:none;"></div>
                         </form> 
@@ -65,18 +68,104 @@ var functionHashi = {
 
 
     },
+
     close: function(){
         $('.lightbox').remove()
         $('.component').remove()
     },
+/******************************************************BANNER */
+    banner: function(){
+        var tmpl = `
+            <div class="container-login component">
+                <div class="content">
+                    <div class="close">
+                        <button onclick="functionHashi.close()">x</button>
+                    </div>
+                        <form action="admin/index.php" onSubmit="limpaDiv();" method="post" name="frmLogin" id="frmLogin" target="_self"> 
+                            <div class="form-group">
+                                <label>Imagem: </label>
+                                <input type="file" data-id="files" onchange="functionHashi.readURL(this)" />
+                            </div>
+
+                            <img src="" class="preview" id="preview" />
+
+                            <div class="form-group">                                
+                                <button type="submit" class="btn" value="Submit" name="acao" onclick="functionHashi.login_action()">
+                                    <i class="fas fa-cloud-upload-alt"></i>
+                                    envia
+                                </button>
+                            </div> 
+
+                            <div id="err" style="display:none;"></div>
+                        </form> 
+                </div>
+            </div>
+        `;
+
+        return tmpl
+    },
+    readURL: function(input) {
+        if (input.files && input.files[0]) {
+            var reader = new FileReader();
+    
+            reader.onload = function (e) {
+                $('#preview').attr('src', e.target.result);
+            }
+    
+            reader.readAsDataURL(input.files[0]);
+        }
+    },
+/******************************************************BANNER */
+    item: function(){
+        var tmpl = `
+            <div class="container-login component">
+                <div class="content">
+                    <div class="close">
+                        <button onclick="functionHashi.close()">x</button>
+                    </div>
+                        <form action="admin/index.php" onSubmit="limpaDiv();" method="post" name="frmLogin" id="frmLogin" target="_self"> 
+                            <div class="form-group">
+                                <label>Nome: </label>
+                                <input type="type" placeholder="Nome" />
+                            </div>
+
+                            <div class="form-group">
+                                <label>Nome: </label>
+                                <input type="type" placeholder="Outro nome" />
+                            </div>
+
+                            <div class="form-group">
+                                <label>Nome: </label>
+                                <input type="type" placeholder="Mais um nome" />
+                            </div>
+
+                            <div class="form-group">
+                                <input type="submit" class="btn" value="Submit" name="acao" onclick="functionHashi.login_action()" value="envia">
+                            </div> 
+
+                            <div id="err" style="display:none;"></div>
+                        </form> 
+                </div>
+            </div>
+        `;
+
+        return tmpl
+    },
+/******************************************************AÇOES */
     utils: function(){
         $('.owl-carousel').owlCarousel({ items: 1 });
         
         $('[data-id="maneger-acoount"]').click(function(){
-            $('.main').append(
-                functionHashi.login(),
-                functionHashi.lightbox()
-            )
+            $('.main').append(functionHashi.login(),functionHashi.lightbox())
         });
+
+        $('[data-id="banner"]').click(function(){
+            $('.main').append(functionHashi.banner(),functionHashi.lightbox());
+        });
+
+        $('[data-id="item"]').click(function(){
+            $('.main').append(functionHashi.item(),functionHashi.lightbox());
+        });
+          
     }
 }
