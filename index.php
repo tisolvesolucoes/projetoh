@@ -41,7 +41,7 @@
             <h1><a href="./"><img src="./img/login.jpeg" /></a></h1>
             <ul class="nav">
                 <li> <a href="javascript:;">Home</a> </li>
-                <li> <a href="javascript:;">Sobre</a> </li>
+                <li> <a href="#sobre" class="sliding-link">Sobre</a> </li>
                 <li> <a href="javascript:;">Soluções</a> </li>
                 <li> <a href="javascript:;">Preços</a> </li>
                 <li> <a href="javascript:;">Contato</a> </li>
@@ -51,6 +51,7 @@
         
         <section class="banner">
             <div class="owl-carousel">
+                <div></div>
             </div>
         </section>
 
@@ -100,9 +101,31 @@
             </ul>
         </div>
         
-        <section class="container-item"> <div class="center">0</div> </section>
-        <section class="container-item"> <div class="center">0</div> </section>
-        <section class="container-item"> <div class="center">0</div> </section>
+        <div class="animation container-item">
+            <div class="row center">
+                <div data-aos="fade-down-right">
+                    teste
+                </div>
+            </div>
+        </div>
+        
+        <section class="container-item"> 
+            <div class="center">
+                teste
+            </div> 
+        </section>
+        
+        <section class="animation container-item"  id="sobre" data-aos="zoom-out-down">
+            <div class="row center">
+                teste
+            </div>
+        </section>
+
+        <section class="container-item"> 
+            <div class="center">
+                teste
+            </div> 
+        </section>
 
         <footer class="footer">
             <div class="center">

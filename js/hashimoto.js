@@ -167,5 +167,16 @@ var functionHashi = {
             $('.main').append(functionHashi.item(),functionHashi.lightbox());
         });
           
+        AOS.init({
+            easing: 'ease-out-back',
+            duration: 1000
+        });
+
+        $(".sliding-link").click(function(e) {
+            e.preventDefault();
+            var aid = $(this).attr("href");
+            $('html,body').animate({scrollTop: $(aid).offset().top},'slow');
+        });
+
     }
 }
