@@ -167,7 +167,12 @@ h1 a img{
     align-items: center;
 }
 .elements{
-
+    flex: 1;
+    border-radius: 2px;
+}
+.elements:last-child{
+    background: white;
+    padding: 5px;
 }
 .owl-carousel{
     background-color:rgb(208, 212, 255);

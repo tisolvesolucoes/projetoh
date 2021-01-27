@@ -43,7 +43,7 @@
                 <li> <a href="javascript:;">Home</a> </li>
                 <li> <a href="#sobre" class="sliding-link">Sobre</a> </li>
                 <li> <a href="javascript:;">Soluções</a> </li>
-                <li> <a href="javascript:;">Preços</a> </li>
+                <li> <a href="javascript:;">Serviços</a> </li>
                 <li> <a href="javascript:;">Contato</a> </li>
                 <li> <a href="javascript:;" data-id="maneger-acoount">Área de cliente</a> </li>
             </ul>
