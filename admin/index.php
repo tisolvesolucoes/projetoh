@@ -23,7 +23,10 @@
                 <li> <a href="javascript:;">Contato</a> </li>
                 <li> 
                     <div class="account">
-                        <div class="user">Quem está logado  
+                        <div class="user">
+                        
+                                    <?php echo $_SESSION['usuario'] ?>
+                           
                             <div data-id="maneger-acoount">
                                 <i class="fas fa-sign-in-alt"></i>
                             </div> 

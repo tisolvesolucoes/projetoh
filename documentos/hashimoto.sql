@@ -50,3 +50,44 @@ COMMIT;
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
+
+
+CREATE TABLE IF NOT EXISTS `solucoes` (
+  `idsolucoes` int(11) NOT NULL AUTO_INCREMENT,
+  `titulo` varchar(45) DEFAULT NULL,
+  `descricao` varchar(250) DEFAULT NULL,
+  `tipoSolucao` int(1) DEFAULT NULL,
+  `ativo` int(1) DEFAULT NULL,
+  `dataCadastro` datetime DEFAULT NULL,
+  PRIMARY KEY (`idsolucoes`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+CREATE TABLE IF NOT EXISTS `tbl_banners` (
+  `id_banner` int(11) NOT NULL AUTO_INCREMENT,
+  `url` varchar(250) DEFAULT NULL,
+  `link` varchar(250) NOT NULL DEFAULT '',
+  PRIMARY KEY (`id_banner`),
+  KEY `id_banner` (`id_banner`)
+) ENGINE=MyISAM DEFAULT CHARSET=utf8;
+
+
+CREATE TABLE IF NOT EXISTS `usuario` (
+  `idusuario` int(11) NOT NULL AUTO_INCREMENT,
+  `nomeUsuario` varchar(45) NOT NULL,
+  `email` varchar(45) NOT NULL,
+  `senha` varchar(225) NOT NULL,
+  `nivel` int(11) DEFAULT NULL,
+  `dataCadastro` datetime DEFAULT NULL,
+  `ativo` int(11) DEFAULT NULL,
+  PRIMARY KEY (`idusuario`)
+) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8;
+
+CREATE TABLE IF NOT EXISTS `tabelasprecos` (
+  `idtabelasPrecos` int(11) NOT NULL AUTO_INCREMENT,
+  `servico` text,
+  `valor` decimal(10,0) DEFAULT NULL,
+  `taxa` decimal(10,0) DEFAULT NULL,
+  `total` decimal(10,0) DEFAULT NULL,
+  `prazo` varchar(45) DEFAULT NULL,
+  PRIMARY KEY (`idtabelasPrecos`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
