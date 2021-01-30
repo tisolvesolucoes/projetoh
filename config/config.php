@@ -14,17 +14,17 @@
     } 
 
     if(isset($_REQUEST['email'])){
-        echo $email = $_REQUEST['email'];
-        echo $senha = $_REQUEST['senha'];
+         $email = $_REQUEST['email'];
+         $senha = $_REQUEST['senha'];
 
-        $sql = $pdo->prepare("SELECT * FROM usuario WHERE email = ?");
+        $sql = $pdo->prepare("SELECT * FROM tbl_usuario WHERE email = ?");
         $sql->execute([$email]);
 
         if($sql->rowCount() == 1){
             $info = $sql->fetch();
             if(password_verify($senha, $info['senha'])){
                 $_SESSION['login'] = true;
-                $_SESSION['id'] = $info['idusuario'];
+                $_SESSION['id'] = $info['idUsuario'];
                 $_SESSION['usuario'] = $info['nomeUsuario'];
                 header("Location: index.php");
                 die();

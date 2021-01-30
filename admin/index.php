@@ -1,8 +1,10 @@
-<?php
-    include('../config/config.php');
+<?php    
+    include('../config/main.php');
+    include('../config/config.php');//$_SERVER['SERVER_NAME'] .
+    $urlBanner = str_replace("index.php", "",  $_SERVER["REQUEST_URI"]);
 ?>
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -14,13 +16,16 @@
 
 <div class="main">
         <div class="header center">
-            <h1><a href="./../">Hashimoto</a></h1>
+            <h1><a href="../"><img src="../img/logo.jpeg" /></a></h1>
             <ul class="nav">
+
                 <li> <a href="javascript:;">Home</a> </li>
                 <li> <a href="javascript:;">Sobre</a> </li>
                 <li> <a href="javascript:;">Soluções</a> </li>
                 <li> <a href="javascript:;">Preços</a> </li>
                 <li> <a href="javascript:;">Contato</a> </li>
+                <li> <a target="_black" 
+                href="<?php echo $urlBanner; ?>banners/banners_cadastrar.php">Banners</a> </li>
                 <li> 
                     <div class="account">
                         <div class="user">
@@ -28,7 +33,9 @@
                                     <?php echo $_SESSION['usuario'] ?>
                            
                             <div data-id="maneger-acoount">
-                                <i class="fas fa-sign-in-alt"></i>
+                                <a href="?sair">
+                                    <i class="fas fa-sign-in-alt">
+                                </i></a>
                             </div> 
                         </div>
                     </div>

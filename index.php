@@ -4,14 +4,14 @@
         $email = $_REQUEST['email'];
         $senha = $_REQUEST['senha'];
 
-        $sql = $pdo->prepare("SELECT * FROM usuario WHERE email = ?");
+        $sql = $pdo->prepare("SELECT * FROM tbl_usuario WHERE email = ?");
         $sql->execute([$email]);
 
         if($sql->rowCount() == 1){
             $info = $sql->fetch();
             if(password_verify($senha, $info['senha'])){
                 $_SESSION['login'] = true;
-                $_SESSION['id'] = $info['idusuario'];
+                $_SESSION['id'] = $info['idUsuario'];
                 $_SESSION['usuario'] = $info['nomeUsuario'];
                 header("Location: admin.php");
                 die();
@@ -26,11 +26,11 @@
     }
 ?>
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Hashimoto</title>
+    <title>Hashimoto Legal</title>
 
     <?php include('./header.php'); ?>
 </head>
@@ -38,7 +38,7 @@
 
     <div class="main">
         <div class="header center">
-            <h1><a href="./"><img src="./img/login.jpeg" /></a></h1>
+            <h1><a href="./"><img src="./img/logo.jpeg" /></a></h1>
             <ul class="nav">
                 <li> <a href="javascript:;">Home</a> </li>
                 <li> <a href="#sobre" class="sliding-link">Sobre</a> </li>
