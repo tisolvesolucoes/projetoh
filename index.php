@@ -38,7 +38,7 @@
 
     <div class="main">
         <div class="header center">
-            <h1><a href="./"><img src="./img/logo.jpeg" /></a></h1>
+            <h1><a href="./"><img src="./img/logo2.jpeg" /></a></h1>
             <ul class="nav">
                 <li> <a href="javascript:;">Home</a> </li>
                 <li> <a href="#sobre" class="sliding-link">Sobre</a> </li>
@@ -51,7 +51,9 @@
         
         <section class="banner">
             <div class="owl-carousel">
-                <div></div>
+                <div>
+                    <img src="img/pexels-burst-374006.jpg" alt="">
+                </div>
             </div>
         </section>
 

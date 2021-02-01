@@ -35,7 +35,7 @@ var functionHashi = {
                             <div class="form-group">
                                 <button type="submit" class="btn" value="Submit" name="acao" onclick="functionHashi.login_action()">
                                     <i class="fas fa-cloud-upload-alt"></i>
-                                    envia
+                                    &nbsp; Envia
                                 </button>
                             </div> 	
                             <div id="err" style="display:none;"></div>
@@ -92,7 +92,7 @@ var functionHashi = {
                             <div class="form-group">                                
                                 <button type="submit" class="btn" value="Submit" name="acao" onclick="functionHashi.login_action()">
                                     <i class="fas fa-cloud-upload-alt"></i>
-                                    envia
+                                    &nbsp; Envia
                                 </button>
                             </div> 
 
@@ -140,8 +140,11 @@ var functionHashi = {
                             </div>
 
                             <div class="form-group">
-                                <input type="submit" class="btn" value="Submit" name="acao" onclick="functionHashi.login_action()" value="envia">
-                            </div> 
+                                <button type="submit" class="btn" value="Submit" name="acao" onclick="functionHashi.login_action()">
+                                    <i class="fas fa-cloud-upload-alt"></i>
+                                    &nbsp; Envia
+                                </button>
+                             </div> 
 
                             <div id="err" style="display:none;"></div>
                         </form> 
@@ -176,6 +179,13 @@ var functionHashi = {
             e.preventDefault();
             var aid = $(this).attr("href");
             $('html,body').animate({scrollTop: $(aid).offset().top},'slow');
+        });
+
+        $(document).on('click', function(event) {
+            if ($(event.target).has('.content').length) {
+                $(".lightbox").remove();
+                $(".component").remove();
+            }
         });
 
     }

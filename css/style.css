@@ -1,11 +1,23 @@
+:root {
+    --color0: #003f7c;
+    --color1: #ffffff;
+    --color2: #1c1c1c;
+    --color3: #b2b2b2;
+    --color4: #f8b42d;
+    --color5: #cccccc;
+    --color6: #55af0f;
+    --color7: #7c0043;
+    --color8: #dddddd;
+}
+
 body{
-    background-color: white;
-    color: #1c1c1c;
+    background-color: var(--color1);
+    color: var(--color2);
     font-size: 1em;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 a{
-    color: #1c1c1c;
+    color: var(--color2);
 }
 .main{
     display: flex;
@@ -27,20 +39,43 @@ h1 a img{
     justify-content: space-between;
     align-items: center;
 }
+.header h1{
+    flex: 0;
+}
 .header .nav{
     display: flex;
+    flex: 1;
+    justify-content: flex-end;
 }
 .header .nav li a{
     padding: 50px 20px;
     align-items: center;
     text-decoration: none;
-    background-color: white;
+    background-color: var(--color1);
     transition: background-color 0.5s ease;
     display: flex;
 }
 .header .nav li a:hover{
-    background-color: #1c1c1c;
-    color: white;
+    background-color: var(--color7);
+    color: var(--color1);
+}
+.header .account{
+    flex: 0;
+    background-color: var(--color3);
+    color: var(--color1);
+    height: 116px;
+    display: flex;
+    align-items: center;
+    padding: 0 10px;
+}
+.header .account .user{
+    display: flex;
+}
+.header .account i{
+    color: var(--color1);
+}
+.header .account .user div{
+    margin-left: 10px;
 }
 /* BANNER ********************************************/
 .owl-item{
@@ -58,11 +93,11 @@ h1 a img{
     z-index: 1;
 }
 .service .list-server li{
-    background-color: #f8b42d;
+    background-color: var(--color7);
     padding: 10px;
-    box-shadow: 0px 1px 2px #ccc;
+    /* box-shadow: 0px 1px 2px var(--color5); */
     margin: 0 0.2%;
-    color: white;
+    color: var(--color1);
     border-radius: 4px;
     min-width: 29%;
 }
@@ -84,15 +119,15 @@ h1 a img{
     min-height: 300px; 
 }
 .container-item:nth-child(even){
-    background-color:#4e2df8; /* #8a7816 */
+    background-color: var(--color0); /* #8a7816 */
     position: relative;
-    color: white; 
+    color: var(--color1); 
 }
 /* FOOTER ********************************************/
 .footer{
     padding: 20px 0;
-    color: white;
-    background-color: #1c1c1c;  
+    color: var(--color1);
+    background-color: var(--color2);  
 }
 /* LIGHTBOX ********************************************/
 .lightbox{
@@ -118,9 +153,11 @@ h1 a img{
 }
 .container-login .content{
     position: relative;
-    background: white;
+    background: var(--color1);
     padding: 20px;
     border-radius: 4px;
+    min-width: 50%;
+    width: 200px;
 }
 .content .close{
     position: absolute;
@@ -129,7 +166,7 @@ h1 a img{
 }
 .content .close button{
     border-radius: 50%;
-    background: white;
+    background: var(--color1);
     border: 0;
     width: 25px;
     height: 25px;
@@ -146,20 +183,20 @@ h1 a img{
     margin-bottom: 10px;
 }
 .form-group input{
-    border: 1px solid #ddd;
+    border: 1px solid var(--color8);
     padding: 5px;
     border-radius: 4px;    
 }
 .btn{
-    padding: 5px;
+    padding: 8px 12px;
     border: none;
-    background: rgb(27, 140, 15);
-    color: white;
+    background: var(--color6);
+    color: var(--color1);
     border-radius: 4px;
     cursor: pointer;
 }
 .btn-internal{
-    background-color: rgb(248, 72, 45);
+    background-color: var(--color7);
 }
 .load-elements{
     display: flex;
@@ -171,7 +208,7 @@ h1 a img{
     border-radius: 2px;
 }
 .elements:last-child{
-    background: white;
+    background: var(--color1);
     padding: 5px;
 }
 .owl-carousel{

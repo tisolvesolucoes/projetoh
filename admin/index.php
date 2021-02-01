@@ -16,7 +16,7 @@
 
 <div class="main">
         <div class="header center">
-            <h1><a href="../"><img src="../img/logo.jpeg" /></a></h1>
+            <h1><a href="../"><img src="../img/logo2.jpeg" /></a></h1>
             <ul class="nav">
 
                 <li> <a href="javascript:;">Home</a> </li>
@@ -24,24 +24,23 @@
                 <li> <a href="javascript:;">Soluções</a> </li>
                 <li> <a href="javascript:;">Preços</a> </li>
                 <li> <a href="javascript:;">Contato</a> </li>
-                <li> <a target="_black" 
-                href="<?php echo $urlBanner; ?>banners/banners_cadastrar.php">Banners</a> </li>
+                <li> <a target="_black" href="<?php echo $urlBanner; ?>banners/banners_cadastrar.php">Banners</a> </li>
                 <li> 
-                    <div class="account">
-                        <div class="user">
-                        
-                                    <?php echo $_SESSION['usuario'] ?>
-                           
-                            <div data-id="maneger-acoount">
-                                <a href="?sair">
-                                    <i class="fas fa-sign-in-alt">
-                                </i></a>
-                            </div> 
-                        </div>
-                    </div>
+                    
                    
                 </li>
             </ul>
+
+            <div class="account">
+                <div class="user">                
+                    <?php echo $_SESSION['usuario'] ?>                    
+                    <div data-id="maneger-acoount">
+                        <a href="?sair">
+                            <i class="fas fa-sign-in-alt">
+                        </i></a>
+                    </div> 
+                </div>
+            </div>
         </div>
         
         <section class="container-item">
