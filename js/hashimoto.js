@@ -41,8 +41,7 @@ var functionHashi = {
                             <div id="err" style="display:none;"></div>
                         </form> 
                 </div>
-            </div>
-        `;
+            </div>`;
 
         return tmpl
     },
@@ -74,47 +73,55 @@ var functionHashi = {
         $('.component').remove()
     },
 /******************************************************BANNER */
-    banner: function(){
-        var tmpl = `
-            <div class="container-login component">
-                <div class="content">
-                    <div class="close">
-                        <button onclick="functionHashi.close()">x</button>
-                    </div>
-                        <form action="admin/index.php" onSubmit="limpaDiv();" method="post" name="frmLogin" id="frmLogin" target="_self"> 
-                            <div class="form-group">
-                                <label>Imagem: </label>
-                                <input type="file" data-id="files" onchange="functionHashi.readURL(this)" />
-                            </div>
-
-                            <img src="" class="preview" id="preview" />
-
-                            <div class="form-group">                                
-                                <button type="submit" class="btn" value="Submit" name="acao" onclick="functionHashi.login_action()">
-                                    <i class="fas fa-cloud-upload-alt"></i>
-                                    &nbsp; Envia
-                                </button>
-                            </div> 
-
-                            <div id="err" style="display:none;"></div>
-                        </form> 
+banner: function(){
+    var tmpl = `
+        <div class="container-login component">
+            <div class="content">
+                <div class="close">
+                    <button onclick="functionHashi.close()">x</button>
                 </div>
-            </div>
-        `;
+                    <form action="http://localhost/sites/hashimotolegal/admin/banners/script_banners.php?tipo=cadastrar" 
+                    onSubmit="limpaDiv();" 
+                    method="post" 
+                    name="frmBanner" 
+                    enctype="multipart/form-data" 
+                    id="frmBanner" 
+                    target="_self"> 
+                        <div class="form-group">
+                            <label>Url:</label>
+                            <input type="text" name="link" id="link" />
+                            <label>Imagem: </label>
+                            <input type="file" data-id="files" name="nome" id="nome" onchange="functionHashi.readURL(this)" />
+                            <input type="hidden" name="caminho" id="caminho" value="/admin/imagens/banners/" />
+                        </div>
 
-        return tmpl
-    },
-    readURL: function(input) {
-        if (input.files && input.files[0]) {
-            var reader = new FileReader();
-    
-            reader.onload = function (e) {
-                $('#preview').attr('src', e.target.result);
-            }
-    
-            reader.readAsDataURL(input.files[0]);
+                        <img src="" class="preview" id="preview" />
+
+                        <div class="form-group">                                
+                            <button type="submit" class="btn" value="Submit" name="acao" onclick="functionHashi.login_action()">
+                                <i class="fas fa-cloud-upload-alt"></i>
+                                Envia Banner
+                            </button>
+                        </div> 
+
+                        <div id="err" style="display:none;"></div>
+                    </form> 
+            </div>
+        </div>`;
+
+    return tmpl
+},
+readURL: function(input) {
+    if (input.files && input.files[0]) {
+        var reader = new FileReader();
+
+        reader.onload = function (e) {
+            $('#preview').attr('src', e.target.result);
         }
-    },
+
+        reader.readAsDataURL(input.files[0]);
+    }
+},
 /******************************************************BANNER */
     item: function(){
         var tmpl = `
@@ -149,8 +156,7 @@ var functionHashi = {
                             <div id="err" style="display:none;"></div>
                         </form> 
                 </div>
-            </div>
-        `;
+            </div>`;
 
         return tmpl
     },

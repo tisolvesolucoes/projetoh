@@ -4,20 +4,26 @@ if (empty($_SESSION['id'])) {
  echo "Acesso negado!";
  exit;
 }else{
-include('config/conexao.php');
+include('../../config/config.php');
+$acao   		= $_REQUEST['tipo'];
+$usuario_id   	= $_SESSION['id'];
+$usuario_nome 	= $_SESSION['nomeUsuario'];
 
-$usuario_id   = $_SESSION['id'];
-$usuario_nome = $_SESSION['nomeUsuario'];
 }
-?>
-<?php
-// PEGA OS DADOS DO USUARIO
+
+/* PEGA OS DADOS DO USUARIO
 
 $query = "SELECT * FROM tbl_usuario where idUsuario = '$usuario_id'";
 $resultado = mysql_query($query);
 	$campo = mysql_fetch_array ($resultado);
 	$usuario_nome = $campo ['nome'];
-
+*/
+if($_SESSION['id'] > 0){
+	echo '<br>acao = '.$acao;
+	echo '<br>nome = '.$nome   	= $_REQUEST['nome'];
+	echo '<br>caminho = '.$caminho   = $_REQUEST['caminho'];
+	echo '<br>link = '.$link   	= $_REQUEST['link'];
+	echo '<br>link = '.var_dump ($_REQUEST);
 
 switch ($acao) {
 case cadastrar:
@@ -196,9 +202,9 @@ if ($rs){
 <SCRIPT language="JavaScript">window.location.href="banners_listar.php";</SCRIPT>
 
 <?php
-}
+	}
 
-break;
+	break;
+	}
 }
-
 ?>

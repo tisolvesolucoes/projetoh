@@ -1,7 +1,7 @@
 <?php 
     session_start();
     const host = 'localhost';
-    const dbname = 'hashimoto';
+    const dbname = 'hashimotolegal';
     const user = 'root';
     const senha = '';
 
