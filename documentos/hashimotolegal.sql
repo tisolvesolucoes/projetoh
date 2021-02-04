@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1:3306
--- Tempo de geração: 04-Fev-2021 às 11:59
+-- Tempo de geração: 04-Fev-2021 às 19:03
 -- Versão do servidor: 5.7.31
 -- versão do PHP: 7.4.9
 
@@ -30,19 +30,22 @@ SET time_zone = "+00:00";
 DROP TABLE IF EXISTS `tbl_banners`;
 CREATE TABLE IF NOT EXISTS `tbl_banners` (
   `id_banner` int(11) NOT NULL AUTO_INCREMENT,
-  `nome` text,
+  `nome` text NOT NULL,
   `link` varchar(250) DEFAULT '',
   PRIMARY KEY (`id_banner`),
   KEY `id_banner` (`id_banner`)
-) ENGINE=MyISAM AUTO_INCREMENT=3 DEFAULT CHARSET=utf8;
+) ENGINE=MyISAM AUTO_INCREMENT=6 DEFAULT CHARSET=utf8;
 
 --
 -- Extraindo dados da tabela `tbl_banners`
 --
 
 INSERT INTO `tbl_banners` (`id_banner`, `nome`, `link`) VALUES
-(1, 'pexels-burst-374006.jpg', 'https://www.devmedia.com.br/introducao-ao-php-pdo/24973'),
-(2, 'bcg_slide-1.jpg', 'https://www.uol.com.br');
+(1, '5bdfa9234ea2939ce620a502ec218524.jpg', NULL),
+(2, '5878da5ca2d3f8bc70eaa75d94826300.jpg', NULL),
+(3, '7cc62a50e1d67fb32f4321acb82c6931.png', NULL),
+(4, 'd106f9732d62e67c601425adb213a7d4.png', NULL),
+(5, 'f742b31f3dd6d3e6b9eea7231584b23d.jpg', NULL);
 
 -- --------------------------------------------------------
 

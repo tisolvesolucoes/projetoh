@@ -18,7 +18,6 @@ if($_SESSION['id'] > 0){
 
 switch ($acao) {
 case "cadastrar":
-echo 'teste';
 	// Pasta onde o arquivo vai ser salvo
 			$_UP['pasta'] = '../img/banners/';
 			// Tamanho máximo do arquivo (em Bytes)
@@ -53,7 +52,7 @@ echo 'teste';
 			// Primeiro verifica se deve trocar o nome do arquivo
 			
 			// Cria um nome baseado no UNIX TIMESTAMP atual e com extensão .jpg
-			echo 'nome_final - ' . $nome_final = md5(time()).".".$extensao;
+			$nome_final = md5(time()).".".$extensao;
 	
 			// Depois verifica se é possível mover o arquivo para a pasta escolhida
 			if (move_uploaded_file($_FILES['arquivo']['tmp_name'], $_UP['pasta'] . $nome_final)) {
@@ -65,12 +64,12 @@ echo 'teste';
 				$stmt->bindParam(2,$link);
 	
 					$stmt->execute();
-					echo '<a href="/">Clique aqui para voltar para o painel</a>';
+				
 			}
 ?>
 
 <SCRIPT LANGUAGE="JavaScript" TYPE="text/javascript"> alert ("Cadastro de banner efetuado com sucesso =D ")</SCRIPT>
-<SCRIPT language="JavaScript">window.location.href="/";</SCRIPT>
+<SCRIPT language="JavaScript">window.location.href="../";</SCRIPT>
 
 <?php
 
@@ -112,7 +111,7 @@ case excluir:
 ?>
 
 <SCRIPT LANGUAGE="JavaScript" TYPE="text/javascript"> alert ("exclusao de banner efetuada com sucesso")</SCRIPT>
-<SCRIPT language="JavaScript">window.location.href="/";</SCRIPT>
+<SCRIPT language="JavaScript">window.location.href="../";</SCRIPT>
 
 <?php
 				}
