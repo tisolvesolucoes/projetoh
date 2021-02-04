@@ -68,6 +68,24 @@ var functionHashi = {
 
     },
 
+    banner_action: function(){
+        $.ajax({
+            type: 'POST',
+            dataType: 'json',
+            url: 'banners/script_banners.php',
+            async: true,
+            data: JSON.stringify({nome: 'teste', caminho: $('[data-id="files"]').val(), link: $('#link').val()}),
+            success: function(response) {
+                console.log('success')
+                alert('stop')
+            },
+            error: function(error){
+                console.log(error)
+                alert('stop')
+            }
+        });
+    },
+
     close: function(){
         $('.lightbox').remove()
         $('.component').remove()
@@ -80,8 +98,8 @@ banner: function(){
                 <div class="close">
                     <button onclick="functionHashi.close()">x</button>
                 </div>
-                    <form action="http://localhost/sites/hashimotolegal/admin/banners/script_banners.php?tipo=cadastrar" 
-                    onSubmit="limpaDiv();" 
+                    <form 
+                    onSubmit="return false" 
                     method="post" 
                     name="frmBanner" 
                     enctype="multipart/form-data" 
@@ -97,7 +115,7 @@ banner: function(){
                         <img src="" class="preview" id="preview" />
 
                         <div class="form-group">                                
-                            <button type="submit" class="btn" value="Submit" name="acao" onclick="functionHashi.login_action()">
+                            <button type="submit" class="btn" value="Submit" name="acao" onclick="functionHashi.banner_action()">
                                 <i class="fas fa-cloud-upload-alt"></i>
                                 Envia Banner
                             </button>
