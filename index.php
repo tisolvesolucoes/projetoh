@@ -52,24 +52,20 @@
         <section class="banner">
             <div class="owl-carousel">
                 
-                    <?php
-                        $sql = $pdo->prepare("select * FROM tbl_banners order by 1 ASC");
-                        $sql->execute();
+            <?php
+                    $sql = $pdo->prepare("select * FROM tbl_banners");
+                    $sql->execute();
 
-                        if($sql->rowCount() > 0){
-                            while($info = $sql->fetch()){
-                        ?>
-                        <div>
+                    if($sql->rowCount() > 0){
+                        while($info = $sql->fetch()){
+                            ?>
                             <a href="<?php echo $info['link']; ?>">
-                                <img src="img/banners/<?php echo $info['nome'];?>" alt="">
+                                <img src="img/banners/<?php echo $info['nome'];?>" width="150" alt="">
                             </a> 
-                        </div>
                     <?php
-                            }
                         }
+                    }
                     ?>
-
-                
             </div>
         </section>
 

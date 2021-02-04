@@ -91,6 +91,7 @@ var functionHashi = {
             }
         });
     },
+    
 
     close: function(){
         $('.lightbox').remove()
@@ -104,8 +105,20 @@ banner: function(){
                 <div class="close">
                     <button onclick="functionHashi.close()">x</button>
                 </div>
-                    <form 
+        
+                <form method="post" action="script_banners.php?tipo=cadastrar"
+                enctype="multipart/form-data">
+                  <label>Arquivo</label>
+                  <input type="file" name="arquivo" />
+                
+                  <input type="submit" value="Enviar" />
+                </form>
+                            
+
+
+                    <!--<form 
                     onSubmit="return false" 
+                    action="banners/script_banners.php?tipo=cadastrar"
                     method="post" 
                     name="frmBanner" 
                     enctype="multipart/form-data" 
@@ -115,13 +128,17 @@ banner: function(){
                             <label>Url:</label>
                             <input type="text" name="link" id="link" />
                             <label>Imagem: </label>
+<<<<<<< HEAD
                             <input type="file" data-id="files" name="file" id="file" onchange="functionHashi.readURL(this)" />
+=======
+                            <input type="file" name="nome" id="nome" />onchange="functionHashi.readURL(this)" onclick="functionHashi.banner_action()"  -->
+>>>>>>> 2033e240c25acea5f6faef65ea74a249fe5ca2c1
                         </div>
 
                         <img src="" class="preview" id="preview" />
 
                         <div class="form-group">                                
-                            <button type="submit" class="btn" value="Submit" name="acao" onclick="functionHashi.banner_action()">
+                            <button type="submit" onclick="functionHashi.banner_action()" class="btn" value="Submit" name="acao">
                                 <i class="fas fa-cloud-upload-alt"></i>
                                 Envia Banner
                             </button>
@@ -129,6 +146,7 @@ banner: function(){
 
                         <div id="err" style="display:none;"></div>
                     </form> 
+                    -->
             </div>
         </div>`;
 
