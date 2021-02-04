@@ -92,7 +92,6 @@ banner: function(){
                             <input type="text" name="link" id="link" />
                             <label>Imagem: </label>
                             <input type="file" data-id="files" name="nome" id="nome" onchange="functionHashi.readURL(this)" />
-                            <input type="hidden" name="caminho" id="caminho" value="/admin/imagens/banners/" />
                         </div>
 
                         <img src="" class="preview" id="preview" />

@@ -52,7 +52,21 @@
         <section class="banner">
             <div class="owl-carousel">
                 <div>
-                    <img src="img/pexels-burst-374006.jpg" alt="">
+                    <?php
+                        $sql = $pdo->prepare("select * FROM tbl_banners order by 1 ASC");
+                        $sql->execute();
+
+                        if($sql->rowCount() > 0){
+                            while($info = $sql->fetch()){
+                        ?>
+                        <a href="<?php echo $info['link']; ?>">
+                            <img src="img/banners/<?php echo $info['nome'];?>" alt="">
+                        </a> 
+                    <?php
+                            }
+                        }
+                    ?>
+
                 </div>
             </div>
         </section>

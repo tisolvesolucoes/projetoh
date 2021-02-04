@@ -52,6 +52,32 @@
                 </div>                
             </div> 
         </section>
+
+        <section class="container-item"> 
+            <div class="center">
+                <p>Banner's</p>
+            </div> 
+
+                <?php
+
+                    $sql = $pdo->prepare("select * FROM tbl_banners");
+                    $sql->execute();
+
+                    if($sql->rowCount() > 0){
+                        while($info = $sql->fetch()){
+                            ?>
+                            <a href="<?php echo $info['link']; ?>">
+                                <img src="../img/banners/<?php echo $info['nome'];?>" alt="">
+                            </a> 
+                <?php
+                        }
+                    }
+                ?>
+            <div class="center">
+                <p>Banner's</p>
+            </div> 
+            
+        </section>
        
         <section class="container-item"> 
             <div class="center">
@@ -70,9 +96,6 @@
 
     <?php include('./../footer.php'); ?>
 
-<?php
-   
-?>
 
 </body>
 </html>
