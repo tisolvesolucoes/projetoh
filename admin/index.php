@@ -67,7 +67,7 @@
                         while($info = $sql->fetch()){
                             ?>
                             <a href="<?php echo $info['link']; ?>">
-                                <img src="../img/banners/<?php echo $info['nome'];?>" alt="">
+                                <img src="../img/banners/<?php echo $info['nome'];?>" width="150" alt="">
                             </a> 
                 <?php
                         }
