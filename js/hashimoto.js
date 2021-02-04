@@ -69,23 +69,27 @@ var functionHashi = {
     },
 
     banner_action: function(){
-        document.frmBanner.submit();
-        /*
+
+        var dataImg = new FormData();
+        dataImg.append('nome', 'teste');
+        dataImg.append('caminho', $('[data-id="files"]')[0].files[0]);
+        dataImg.append('link',  $('#link').val());
+
         $.ajax({
-            type: 'POST',
-            dataType: 'json',
             url: 'banners/script_banners.php',
-            async: true,
-            data: JSON.stringify({nome: 'teste', caminho: $('[data-id="files"]').val(), link: $('#link').val()}),
+            dataType: 'text', 
+            cache: false,
+            contentType: false,
+            processData: false,
+            data: dataImg,
+            type: 'post',
             success: function(response) {
-                console.log('success')
-                alert('stop')
+                console.log(response)
             },
             error: function(error){
                 console.log(error)
-                alert('stop')
             }
-        });*/
+        });
     },
     
 
@@ -124,7 +128,11 @@ banner: function(){
                             <label>Url:</label>
                             <input type="text" name="link" id="link" />
                             <label>Imagem: </label>
+<<<<<<< HEAD
+                            <input type="file" data-id="files" name="file" id="file" onchange="functionHashi.readURL(this)" />
+=======
                             <input type="file" name="nome" id="nome" />onchange="functionHashi.readURL(this)" onclick="functionHashi.banner_action()"  -->
+>>>>>>> 2033e240c25acea5f6faef65ea74a249fe5ca2c1
                         </div>
 
                         <img src="" class="preview" id="preview" />
