@@ -106,17 +106,10 @@ banner: function(){
                     <button onclick="functionHashi.close()">x</button>
                 </div>
         
-                <form method="post" action="script_banners.php?tipo=cadastrar"
-                enctype="multipart/form-data">
-                  <label>Arquivo</label>
-                  <input type="file" name="arquivo" />
-                
-                  <input type="submit" value="Enviar" />
-                </form>
-                            
+                           
 
 
-                    <!--<form 
+                    <form 
                     onSubmit="return false" 
                     action="banners/script_banners.php?tipo=cadastrar"
                     method="post" 
@@ -128,11 +121,7 @@ banner: function(){
                             <label>Url:</label>
                             <input type="text" name="link" id="link" />
                             <label>Imagem: </label>
-<<<<<<< HEAD
                             <input type="file" data-id="files" name="file" id="file" onchange="functionHashi.readURL(this)" />
-=======
-                            <input type="file" name="nome" id="nome" />onchange="functionHashi.readURL(this)" onclick="functionHashi.banner_action()"  -->
->>>>>>> 2033e240c25acea5f6faef65ea74a249fe5ca2c1
                         </div>
 
                         <img src="" class="preview" id="preview" />
@@ -146,7 +135,7 @@ banner: function(){
 
                         <div id="err" style="display:none;"></div>
                     </form> 
-                    -->
+                    
             </div>
         </div>`;
 
