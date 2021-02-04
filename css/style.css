@@ -101,6 +101,10 @@ h1 a img{
     border-radius: 4px;
     min-width: 29%;
 }
+.preview{
+    width: 75px;
+
+}
 .service .list-server li .content-card{
     padding: 5px;
 }
