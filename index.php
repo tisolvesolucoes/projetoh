@@ -37,8 +37,11 @@
 <body>
 
     <div class="main">
+        <div class="content-bug">
+            <button class="bug">prov</button>
+        </div>
         <div class="header center">
-        <h1><a href="./"><img src="./img/logo.jpeg" /></a></h1>
+            <h1><a href="./"><img src="./img/logo.jpeg" /></a></h1>
             <ul class="nav">
                 <li> <a href="javascript:;">Home</a> </li>
                 <li> <a href="#sobre" class="sliding-link">Sobre</a> </li>
@@ -59,9 +62,11 @@
                     if($sql->rowCount() > 0){
                         while($info = $sql->fetch()){
                             ?>
-                            <a href="<?php echo $info['link']; ?>">
-                                <img src="img/banners/<?php echo $info['nome'];?>" width="150" alt="">
-                            </a> 
+                            <div>
+                                <a href="<?php echo $info['link']; ?>">
+                                    <img src="<?php echo $info['nome'];?>" width="150" alt="">
+                                </a>
+                            </div> 
                     <?php
                         }
                     }

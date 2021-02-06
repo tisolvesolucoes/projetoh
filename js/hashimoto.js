@@ -2,7 +2,7 @@
 function limpaDiv(){
     document.getElementById('err').innerHTML='';
 } 
-
+var dataImg = new FormData();
 var functionHashi = {
     lightbox: function(){
         var lightbox = ``;
@@ -12,6 +12,48 @@ var functionHashi = {
         }
 
         return lightbox
+    },
+
+    banner: function(){
+        var tmpl = `
+            <div class="container-login component">
+                <div class="content">
+                    <div class="close">
+                        <button onclick="functionHashi.close()">x</button>
+                    </div>
+
+                        <form 
+                        onSubmit="return false" 
+                        action="banners/script_banners.php?tipo=cadastrar"
+                        method="post" 
+                        name="frmBanner" 
+                        enctype="multipart/form-data" 
+                        id="frmBanner" 
+                        target="_self"> 
+                            <div class="form-group">
+                                <label>Url:</label>
+                                <input type="text" name="link" id="link" />
+                                <label>Imagem: </label>
+                                <input type="file" data-id="files" name="file" id="file" onchange="functionHashi.readURL(this)" />
+                            </div>
+
+                            <img src="" class="preview" id="preview" />
+
+                            <div class="form-group">   
+                                <div class="status"></div>                             
+                                <button type="submit" onclick="functionHashi.banner_action()" class="btn" value="Submit" name="acao">
+                                    <i class="fas fa-cloud-upload-alt"></i>
+                                    Envia Banner
+                                </button>
+                            </div> 
+
+                            <div id="err" style="display:none;"></div>
+                        </form> 
+                        
+                </div>
+            </div>`;
+
+        return tmpl
     },
 
     login: function(){
@@ -69,11 +111,10 @@ var functionHashi = {
     },
 
     banner_action: function(){
-
-        var dataImg = new FormData();
-        dataImg.append('nome', 'teste');
+        dataImg.append('acao', 'upload');
         dataImg.append('caminho', $('[data-id="files"]')[0].files[0]);
         dataImg.append('link',  $('#link').val());
+        $('.status').append('Carregando...');
 
         $.ajax({
             url: 'banners/script_banners.php',
@@ -85,70 +126,80 @@ var functionHashi = {
             type: 'post',
             success: function(response) {
                 console.log(response)
+                $('.container-login').remove();
+                setTimeout(() => {
+                    window.location.reload()
+                }, 1000);
+            },
+            error: function(error){
+                console.log(error)
+            }
+        });
+    }, 
+    
+    deleteImage_action: function(val, image){
+        //alert(image)
+        dataImg.append('acao', 'deletarImagem');
+        dataImg.append('pathImage',  ''+image+'');
+        dataImg.append('id',  ''+val+'');
+
+        $('.status').append('Carregando...');
+
+        $.ajax({
+            url: 'banners/script_banners.php',
+            dataType: 'text', 
+            cache: false,
+            contentType: false,
+            processData: false,
+            data: dataImg,
+            type: 'post',
+            success: function(response) {
+                console.log(response)
+                $('.container-login').remove();
+                setTimeout(() => {
+                    window.location.reload()
+                }, 1000);
             },
             error: function(error){
                 console.log(error)
             }
         });
     },
-    
 
     close: function(){
         $('.lightbox').remove()
         $('.component').remove()
-    },
-/******************************************************BANNER */
-banner: function(){
-    var tmpl = `
-        <div class="container-login component">
-            <div class="content">
-                <div class="close">
-                    <button onclick="functionHashi.close()">x</button>
-                </div>
-
-                    <form 
-                    onSubmit="return false" 
-                    action="banners/script_banners.php?tipo=cadastrar"
-                    method="post" 
-                    name="frmBanner" 
-                    enctype="multipart/form-data" 
-                    id="frmBanner" 
-                    target="_self"> 
-                        <div class="form-group">
-                            <label>Url:</label>
-                            <input type="text" name="link" id="link" />
-                            <label>Imagem: </label>
-                            <input type="file" data-id="files" name="file" id="file" onchange="functionHashi.readURL(this)" />
-                        </div>
-
-                        <img src="" class="preview" id="preview" />
-
-                        <div class="form-group">                                
-                            <button type="submit" onclick="functionHashi.banner_action()" class="btn" value="Submit" name="acao">
-                                <i class="fas fa-cloud-upload-alt"></i>
-                                Envia Banner
-                            </button>
-                        </div> 
-
-                        <div id="err" style="display:none;"></div>
-                    </form> 
+    }, 
+/******************************************************BANNER */   
+    readURL: function(input) {
+        
+        if (input.files && input.files[0]) {
+            var reader = new FileReader();
+            
+            if ( /\.(jpe?g|png|gif)$/i.test(input.files[0].name) ) {
+                reader.onload = function (e) {
+                    var img = new Image();
+                    img.src = e.target.result;
                     
-            </div>
-        </div>`;
-
-    return tmpl
-},
-readURL: function(input) {
-    if (input.files && input.files[0]) {
-        var reader = new FileReader();
-
-        reader.onload = function (e) {
-            $('#preview').attr('src', e.target.result);
+                    img.onload = function() {
+                       
+                        if(this.width > 1000 && this.height > 450){                        
+                            $('#preview').attr('src', e.target.result);
+                        }else{
+                            $('[data-id="files"]').val('')
+                            alert('largura deve ser + 1000 e altura + 450')
+                        }
+                       
+                    };
+                   
+                }
+    
+                reader.readAsDataURL(input.files[0]);
+            }else{
+                alert('Escolha uma imagem')
+            }
         }
-
-        reader.readAsDataURL(input.files[0]);
-    }
-},
+    },
 /******************************************************BANNER */
     item: function(){
         var tmpl = `
@@ -220,6 +271,18 @@ readURL: function(input) {
                 $(".component").remove();
             }
         });
+
+        $('.bug').click(function(){
+            if($('.header').hasClass('openheader')){
+                $('.header').removeClass('openheader')
+            }else{
+                $('.header').addClass('openheader')
+            }
+        })
+
+        $('.header ul li a').click(function(){
+            $('.header').addClass('openheader')
+        })
 
     }
 }

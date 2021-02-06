@@ -15,9 +15,13 @@
 <body>
 
 <div class="main">
+
+        <div class="content-bug">
+            <button class="bug">prov</button>
+        </div>
         <div class="header center">
-        <h1><a href="../"><img src="../img/logo.jpeg" /></a></h1>
-           <ul class="nav">
+            <h1><a href="../"><img src="../img/logo.jpeg" /></a></h1>
+            <ul class="nav">
 
                 <li> <a href="javascript:;">Home</a> </li>
                 <li> <a href="javascript:;">Sobre</a> </li>
@@ -48,35 +52,36 @@
                 </div>
 
                 <div class="elements">
-                    <div class="right"></div>
+                    <div class="right">
+                    
+                    <?php
+                        $sql = $pdo->prepare("select * FROM tbl_banners");
+                        $sql->execute();
+
+                        if($sql->rowCount() > 0){
+                            while($info = $sql->fetch()){
+                                ?>
+                                <div class="content-image">
+                                    
+                                    <div class="internal-content">
+                                        <img src="../<?php echo $info['nome'];?>" width="150" alt="" />
+                                        <span><?php echo $info['link']; ?></span>
+                                    </div>
+
+                                    <button class="btn" onclick="
+                                    functionHashi.deleteImage_action(<?php echo $info['id_banner']; ?>,'<?php echo $info['nome'];?>')">
+                                        x
+                                    </button>
+
+                                </div>
+                        <?php
+                            }
+                        }
+                    ?>
+
+                    </div>
                 </div>                
             </div> 
-        </section>
-
-        <section class="container-item"> 
-            <div class="center">
-                <p>Banner's</p>
-            </div> 
-
-                <?php
-
-                    $sql = $pdo->prepare("select * FROM tbl_banners");
-                    $sql->execute();
-
-                    if($sql->rowCount() > 0){
-                        while($info = $sql->fetch()){
-                            ?>
-                            <a href="<?php echo $info['link']; ?>">
-                                <img src="../img/banners/<?php echo $info['nome'];?>" width="150" alt="">
-                            </a> 
-                <?php
-                        }
-                    }
-                ?>
-            <div class="center">
-                <p>Banner's</p>
-            </div> 
-            
         </section>
        
         <section class="container-item"> 

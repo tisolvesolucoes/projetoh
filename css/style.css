@@ -77,6 +77,63 @@ h1 a img{
 .header .account .user div{
     margin-left: 10px;
 }
+
+.content-bug{
+    display: none;
+}
+@media only screen and (max-width: 600px) {
+    .openheader{
+        left: -380px !important;
+    }
+    .openheader .bug{
+        position: relative !important;
+        left: 388px !important;
+    }
+    .header{
+        position: fixed;
+        display: block;
+        z-index: 2;
+        left: 0;
+        top: 42px;
+        bottom: 0;
+        background: white;
+        width: 90%;
+        align-items: flex-start;
+    }
+    .header::before{
+        content: '';
+        display: inline;
+        padding: 2px;
+        background: #0000006e;
+        position: absolute;
+        right: -38px;
+        bottom: 0;
+        top: 0;
+        width: 10%;
+    }
+    .header .nav{
+        flex-direction: column;
+    }
+    .header .nav li:hover{
+        background-color: #ddd;
+    }
+    .header .nav li a{
+        padding: 8px 20px;
+    }
+     .content-bug{
+        background-color:white;
+        padding: 10px;
+        display: block;
+        position: fixed;
+        top: 0;
+        z-index: 2;
+        left: 0;
+        right: 0;
+    } 
+    .header h1{
+        display: none;
+    }
+}
 /* BANNER ********************************************/
 .owl-item{
     height: 300px;
@@ -102,7 +159,7 @@ h1 a img{
     min-width: 29%;
 }
 .preview{
-    width: 75px;
+    width: 100%;
 
 }
 .service .list-server li .content-card{
@@ -204,8 +261,19 @@ h1 a img{
 }
 .load-elements{
     display: flex;
-    justify-content: space-between;
+    justify-content: space-between;    
+}
+.internal-content{
+    color: black;
+    flex: 1;
+    display: flex;
     align-items: center;
+}
+.internal-content img{
+    width: 75px;
+    margin-right: 10px;
+    border-radius: 4px;
+    box-shadow: 0 2px 5px #ccc;
 }
 .elements{
     flex: 1;
@@ -214,6 +282,20 @@ h1 a img{
 .elements:last-child{
     background: var(--color1);
     padding: 5px;
+    height: 290px;
+    overflow-x: auto;
+}
+.content-image{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 5px;
+}
+.content-image:nth-child(odd){
+    background: #ddd;    
+}
+.content-image:hover{
+    background: #ccc;
 }
 .owl-carousel{
     background-color:rgb(208, 212, 255);
