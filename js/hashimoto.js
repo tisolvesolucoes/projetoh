@@ -105,9 +105,6 @@ banner: function(){
                 <div class="close">
                     <button onclick="functionHashi.close()">x</button>
                 </div>
-        
-                           
-
 
                     <form 
                     onSubmit="return false" 
