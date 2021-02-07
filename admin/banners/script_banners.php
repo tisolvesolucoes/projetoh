@@ -44,6 +44,16 @@ switch ($acao) {
         }
         break;
     case "cadastrar":
+        
+        $titulo = $_REQUEST['titulo'];
+        $descricao = $_REQUEST['descricao'];
+
+        $sql = "INSERT tbl_solucoes (
+            titulo, 
+            descricao) VALUES ('".$titulo."','".$descricao."')"; 
+
+        mysqli_query($db, $sql); 
+        echo 'ok'; 
         break;
     case "deletar":
         break;    

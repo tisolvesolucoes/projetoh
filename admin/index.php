@@ -19,26 +19,28 @@
         <div class="content-bug">
             <button class="bug">prov</button>
         </div>
-        <div class="header center">
-            <h1><a href="../"><img src="../img/logo.jpeg" /></a></h1>
-            <ul class="nav">
+        <div class="header">
+            <div class="center flex">
+                <h1><a href="../"><img src="../img/logo.jpeg" /></a></h1>
+                <ul class="nav">
 
-                <li> <a href="javascript:;">Home</a> </li>
-                <li> <a href="javascript:;">Sobre</a> </li>
-                <li> <a href="javascript:;">Soluções</a> </li>
-                <li> <a href="javascript:;">Preços</a> </li>
-                <li> <a href="javascript:;">Contato</a> </li>
-    
-            </ul>
+                    <li> <a href="javascript:;">Home</a> </li>
+                    <li> <a href="javascript:;">Sobre</a> </li>
+                    <li> <a href="javascript:;">Soluções</a> </li>
+                    <li> <a href="javascript:;">Preços</a> </li>
+                    <li> <a href="javascript:;">Contato</a> </li>
+        
+                </ul>
 
-            <div class="account">
-                <div class="user">                
-                    <?php echo $_SESSION['usuario'] ?>                    
-                    <div data-id="maneger-acoount">
-                        <a href="?sair">
-                            <i class="fas fa-sign-in-alt">
-                        </i></a>
-                    </div> 
+                <div class="account">
+                    <div class="user">                
+                        <?php echo $_SESSION['usuario'] ?>                    
+                        <div data-id="maneger-acoount">
+                            <a href="?sair">
+                                <i class="fas fa-sign-in-alt">
+                            </i></a>
+                        </div> 
+                    </div>
                 </div>
             </div>
         </div>
@@ -85,10 +87,36 @@
         </section>
        
         <section class="container-item"> 
-            <div class="center">
-                <p>Adicionar item(serviço/produto)</p>
+            <div class="center load-elements">
+                <div class="elements">
+                    <p>Adicionar item(serviço/produto)</p>
+                    <button data-id="item" class="btn btn-internal">Adicionar</button>
+                </div> 
 
-                <button data-id="item" class="btn btn-internal">Adicionar</button>
+                <div class="elements">
+                    <div class="right owl-carousel">
+                        <?php
+                            $sql = $pdo->prepare("select * FROM tbl_solucoes");
+                            $sql->execute();
+
+                            if($sql->rowCount() > 0){
+                                while($info = $sql->fetch()){
+                                    ?>
+                                        
+                                    <div class="internal-content-service">
+                                        <h2><?php echo $info['titulo'];?></h2>
+                                        <p><?php echo $info['descricao']; ?></p>
+
+                                        <button class="btn">
+                                            x
+                                        </button>
+                                    </div>                                  
+                            <?php
+                                }
+                            }
+                        ?>
+                    </div>
+                </div>
             </div> 
         </section>
 

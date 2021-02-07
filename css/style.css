@@ -14,7 +14,7 @@ body{
     background-color: var(--color1);
     color: var(--color2);
     font-size: 1em;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-family: 'Montserrat', sans-serif;
 }
 a{
     color: var(--color2);
@@ -38,6 +38,13 @@ h1 a img{
     display: flex;
     justify-content: space-between;
     align-items: center;
+    box-shadow: 0 1px 4px #ddd;
+
+    -webkit-transition: all 0.5s ease;
+    -moz-transition: position 10s;
+    -ms-transition: position 10s;
+    -o-transition: position 10s;
+    transition: all 0.5s ease;
 }
 .header h1{
     flex: 0;
@@ -77,7 +84,30 @@ h1 a img{
 .header .account .user div{
     margin-left: 10px;
 }
-
+.flex{
+    display: flex;    
+}
+.fixed{
+    position: fixed;
+    background: white;
+    left: 0;
+    right: 0;
+    top: 0;
+    z-index: 2;
+    animation: smoothScroll 1s forwards;
+}
+@keyframes smoothScroll {
+	0% {
+		transform: translateY(-40px);
+	}
+	100% {
+		transform: translateY(0px);
+	}
+}
+.fixed:after{
+    content: '';
+    display: block;
+}
 .content-bug{
     display: none;
 }
@@ -135,6 +165,9 @@ h1 a img{
     }
 }
 /* BANNER ********************************************/
+.banner{
+    margin-bottom: 60px;
+}
 .owl-item{
     height: 300px;
 }
@@ -175,6 +208,7 @@ h1 a img{
     padding: 5px 0;
 }
 /* CONTAINER-ITEM ********************************************/
+
 .container-item{
     padding: 20px 0;
     min-height: 300px; 
@@ -189,6 +223,7 @@ h1 a img{
     padding: 20px 0;
     color: var(--color1);
     background-color: var(--color2);  
+    min-height: 300px;
 }
 /* LIGHTBOX ********************************************/
 .lightbox{
@@ -275,14 +310,47 @@ h1 a img{
     border-radius: 4px;
     box-shadow: 0 2px 5px #ccc;
 }
+.internal-content-service{
+    color: black;
+    flex: 1;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
 .elements{
     flex: 1;
     border-radius: 2px;
 }
+.animation{
+    min-height: 400px;
+}
+.after-element{
+    content: "";
+    display: block;
+    width: 100%;
+    height: 250px;
+    background-color: var(--color0);
+    /* clip-path: polygon(0% 100%, 99% 99%, -8% -4%); */
+    position: absolute;
+    top: -250px;
+    overflow: hidden;
+}
+.before-element{
+    content: "";
+    display: block;
+    height: 50em;
+    left: -70px;
+    background-color: white;
+    background-size: cover;
+    position: absolute;
+    right: -70px;
+    bottom: 3%;
+    border-radius: 50%;
+}
 .elements:last-child{
-    background: var(--color1);
+    background: var(--color7);
     padding: 5px;
-    height: 290px;
+    height: 316px;
     overflow-x: auto;
 }
 .content-image{
@@ -302,7 +370,7 @@ h1 a img{
 }
 .bg{
     position: absolute;
-    height: 83%;
+    height: 38%;
 }
 p{
     line-height: 24px;

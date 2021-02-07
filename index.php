@@ -40,22 +40,24 @@
         <div class="content-bug">
             <button class="bug">prov</button>
         </div>
-        <div class="header center">
-            <h1><a href="./"><img src="./img/logo.jpeg" /></a></h1>
-            <ul class="nav">
-                <li> <a href="javascript:;">Home</a> </li>
-                <li> <a href="#sobre" class="sliding-link">Sobre</a> </li>
-                <li> <a href="javascript:;">Soluções</a> </li>
-                <li> <a href="javascript:;">Serviços</a> </li>
-                <li> <a href="javascript:;">Contato</a> </li>
-                <li> <a href="javascript:;" data-id="maneger-acoount">Área de cliente</a> </li>
-            </ul>
+
+        <div class="header">
+            <div class="center flex">
+                <h1><a href="./"><img src="./img/logo.jpeg" /></a></h1>
+                <ul class="nav">
+                    <li> <a href="javascript:;">Home</a> </li>
+                    <li> <a href="#sobre" class="sliding-link">Sobre</a> </li>
+                    <li> <a href="javascript:;">Soluções</a> </li>
+                    <li> <a href="javascript:;">Serviços</a> </li>
+                    <li> <a href="javascript:;">Contato</a> </li>
+                    <li> <a href="javascript:;" data-id="maneger-acoount">Área de cliente</a> </li>
+                </ul>
+            </div>
         </div>
         
         <section class="banner">
-            <div class="owl-carousel">
-                
-            <?php
+            <div class="owl-carousel">                
+                <?php
                     $sql = $pdo->prepare("select * FROM tbl_banners");
                     $sql->execute();
 
@@ -70,7 +72,7 @@
                     <?php
                         }
                     }
-                    ?>
+                ?>
             </div>
         </section>
 
@@ -123,15 +125,22 @@
         <div class="animation container-item">
             <div class="row center">
                 <div data-aos="fade-down-right">
-                    teste
+                    
                 </div>
             </div>
         </div>
         
         <section class="container-item"> 
-            <div class="center">
-                teste
-            </div> 
+            <div class="after-element">
+                <div class="before-element"></div>
+            </div>
+            
+
+            <div class="row center">
+                <div data-aos="fade-down-right">
+                    Teste
+                </div>
+            </div>            
         </section>
         
         <section class="animation container-item"  id="sobre" data-aos="zoom-out-down">

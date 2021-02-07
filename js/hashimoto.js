@@ -135,7 +135,34 @@ var functionHashi = {
                 console.log(error)
             }
         });
-    }, 
+    },
+
+    service_action: function(){
+        dataImg.append('acao', 'cadastrar');
+        dataImg.append('titulo', $('#titulo').val());
+        dataImg.append('descricao',  $('#descricao').val());
+        $('.status').append('Carregando...');
+
+        $.ajax({
+            url: 'banners/script_banners.php',
+            dataType: 'text', 
+            cache: false,
+            contentType: false,
+            processData: false,
+            data: dataImg,
+            type: 'post',
+            success: function(response) {
+                console.log(response)
+                $('.container-login').remove();
+                setTimeout(() => {
+                    window.location.reload()
+                }, 1000);
+            },
+            error: function(error){
+                console.log(error)
+            }
+        });
+    },
     
     deleteImage_action: function(val, image){
         //alert(image)
@@ -208,24 +235,24 @@ var functionHashi = {
                     <div class="close">
                         <button onclick="functionHashi.close()">x</button>
                     </div>
-                        <form action="admin/index.php" onSubmit="limpaDiv();" method="post" name="frmLogin" id="frmLogin" target="_self"> 
+                        <form 
+                        onSubmit="return false" 
+                        action="banners/script_banners.php?tipo=cadastrar"
+                        method="post" 
+                        name="frmBanner"
+                        target="_self"> 
                             <div class="form-group">
-                                <label>Nome: </label>
-                                <input type="type" placeholder="Nome" />
+                                <label>Titulo: </label>
+                                <input type="type" id="titulo" placeholder="Outro nome" />
                             </div>
 
                             <div class="form-group">
-                                <label>Nome: </label>
-                                <input type="type" placeholder="Outro nome" />
+                                <label>Texto: </label>
+                                <textarea id="descricao"></textarea>
                             </div>
 
                             <div class="form-group">
-                                <label>Nome: </label>
-                                <input type="type" placeholder="Mais um nome" />
-                            </div>
-
-                            <div class="form-group">
-                                <button type="submit" class="btn" value="Submit" name="acao" onclick="functionHashi.login_action()">
+                                <button type="submit" class="btn" value="Submit" name="acao" onclick="functionHashi.service_action()">
                                     <i class="fas fa-cloud-upload-alt"></i>
                                     &nbsp; Envia
                                 </button>
@@ -278,11 +305,25 @@ var functionHashi = {
             }else{
                 $('.header').addClass('openheader')
             }
-        })
+        });
 
         $('.header ul li a').click(function(){
             $('.header').addClass('openheader')
-        })
+        });
+/******************************************************SCROLL */
+        $(window).bind('scroll', function () {
+            if ($(window).scrollTop() > 122) {
+                $('.header').addClass('fixed');
+            } else {
+                $('.header').removeClass('fixed');
+            }
+        });
 
+        if ($(window).scrollTop() > 122) {
+            $('.header').addClass('fixed');
+        } else {
+            $('.header').removeClass('fixed');
+        }
+/******************************************************SCROLL */
     }
 }
