@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1:3306
--- Tempo de geração: 04-Fev-2021 às 19:03
+-- Tempo de geração: 08-Fev-2021 às 18:41
 -- Versão do servidor: 5.7.31
 -- versão do PHP: 7.4.9
 
@@ -34,18 +34,7 @@ CREATE TABLE IF NOT EXISTS `tbl_banners` (
   `link` varchar(250) DEFAULT '',
   PRIMARY KEY (`id_banner`),
   KEY `id_banner` (`id_banner`)
-) ENGINE=MyISAM AUTO_INCREMENT=6 DEFAULT CHARSET=utf8;
-
---
--- Extraindo dados da tabela `tbl_banners`
---
-
-INSERT INTO `tbl_banners` (`id_banner`, `nome`, `link`) VALUES
-(1, '5bdfa9234ea2939ce620a502ec218524.jpg', NULL),
-(2, '5878da5ca2d3f8bc70eaa75d94826300.jpg', NULL),
-(3, '7cc62a50e1d67fb32f4321acb82c6931.png', NULL),
-(4, 'd106f9732d62e67c601425adb213a7d4.png', NULL),
-(5, 'f742b31f3dd6d3e6b9eea7231584b23d.jpg', NULL);
+) ENGINE=MyISAM DEFAULT CHARSET=utf8;
 
 -- --------------------------------------------------------
 
@@ -59,8 +48,6 @@ CREATE TABLE IF NOT EXISTS `tbl_solucoes` (
   `titulo` varchar(70) DEFAULT NULL,
   `descricao` varchar(250) DEFAULT NULL,
   `tipoSolucao` int(1) DEFAULT NULL,
-  `ativo` int(1) DEFAULT NULL,
-  `dataCadastro` datetime DEFAULT NULL,
   PRIMARY KEY (`idSolucoes`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 

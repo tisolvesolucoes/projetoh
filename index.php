@@ -60,13 +60,16 @@
                 <?php
                     $sql = $pdo->prepare("select * FROM tbl_banners");
                     $sql->execute();
-
+                    //echo 'count'.rowCount();
                     if($sql->rowCount() > 0){
+                        echo 'count'.$sql->rowCount();
                         while($info = $sql->fetch()){
                             ?>
                             <div>
                                 <a href="<?php echo $info['link']; ?>">
-                                    <img src="<?php echo $info['nome'];?>" width="150" alt="">
+                                    <img src="img/banners/<?php echo $info['nome'];?>" width="150" alt="">
+                                <img src="img/banners/334b55fcf95a9332c3545b1593dd6255.png" width="150" alt="">
+                          
                                 </a>
                             </div> 
                     <?php

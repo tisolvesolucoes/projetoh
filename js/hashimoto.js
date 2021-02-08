@@ -1,20 +1,24 @@
 
-function limpaDiv(){
-    document.getElementById('err').innerHTML='';
-} 
+function limpaDiv() {
+    document.getElementById('err').innerHTML = '';
+}
+
 var dataImg = new FormData();
+
 var functionHashi = {
-    lightbox: function(){
+    lightbox: function () {
         var lightbox = ``;
 
-        if($('body .lightbox').length == 0){ 
-            lightbox = `<div class="lightbox"></div>` 
+        if ($('body .lightbox').length == 0) {
+            lightbox = `<div class="lightbox"></div>`
         }
 
         return lightbox
     },
 
-    banner: function(){
+
+    /********************* INICIO ESTRUTURA BANNER ********************/
+    banner: function () {
         var tmpl = `
             <div class="container-login component">
                 <div class="content">
@@ -35,6 +39,8 @@ var functionHashi = {
                                 <input type="text" name="link" id="link" />
                                 <label>Imagem: </label>
                                 <input type="file" data-id="files" name="file" id="file" onchange="functionHashi.readURL(this)" />
+                                <input type="hidden" data-id="acao" name="acao" id="acao" value="upload" />
+                            
                             </div>
 
                             <img src="" class="preview" id="preview" />
@@ -55,8 +61,123 @@ var functionHashi = {
 
         return tmpl
     },
+   /********************* INICIO ESTRUTURA BANNER ********************/
+    banner_action: function () {
 
-    login: function(){
+        dataImg.append('caminho', $('[data-id="files"]')[0].files[0]);
+        dataImg.append('link', $('#link').val());
+        dataImg.append('acao', $('#acao').val());
+        $('.status').append('Carregando...');
+
+        $.ajax({
+            url: 'banners/script_banners.php',
+            dataType: 'text',
+            cache: false,
+            contentType: false,
+            processData: false,
+            data: dataImg,
+            type: 'post',
+            success: function (response) {
+                console.log(response)
+                $('.container-login').remove();
+                setTimeout(() => { 
+                   window.location.reload()
+                }, 1000);
+            },
+            error: function (error) {
+                console.log(error)
+            }
+        });
+    },
+   /********************* FIM CADASTRO BANNER ********************/
+   /********************* INICIO DELETE BANNER ********************/
+    deleteImage_action: function (val, image) {
+        //alert(image)
+        dataImg.append('acao', 'deletarImagem');
+        dataImg.append('pathImage', '' + image + '');
+        dataImg.append('id', '' + val + '');
+
+        $('.status').append('Carregando...');
+
+        $.ajax({
+            url: 'banners/script_banners.php',
+            dataType: 'text',
+            cache: false,
+            contentType: false,
+            processData: false,
+            data: dataImg,
+            type: 'post',
+            success: function (response) {
+                console.log(response)
+                $('.container-login').remove();
+                setTimeout(() => {
+                    window.location.reload()
+                }, 1000);
+            },
+            error: function (error) {
+                console.log(error)
+            }
+        });
+    },
+    readURL: function (input) {
+
+        if (input.files && input.files[0]) {
+            var reader = new FileReader();
+
+            if (/\.(jpe?g|png|gif)$/i.test(input.files[0].name)) {
+                reader.onload = function (e) {
+                    var img = new Image();
+                    img.src = e.target.result;
+
+                    img.onload = function () {
+
+                        if (this.width > 1000 && this.height > 450) {
+                            $('#preview').attr('src', e.target.result);
+                        } else {
+                            $('[data-id="files"]').val('')
+                            alert('largura deve ser + 1000 e altura + 450')
+                        }
+
+                    };
+
+                }
+
+                reader.readAsDataURL(input.files[0]);
+            } else {
+                alert('Escolha uma imagem')
+            }
+        }
+    },
+
+    /********************* FIM ESTRUTURA BANNER ********************/
+
+
+
+    /********************* INICIO ESTRUTURA LOGIN ********************/
+
+    login_action: function () {
+
+        if (document.frmLogin.email.value == '') {
+            document.getElementById('err').innerHTML = '';
+            document.getElementById("err").style.display = "block";
+            document.getElementById('err').innerHTML = 'Preencha o campo Email';
+            document.frmLogin.senha.focus();
+            return false;
+        } else if (document.frmLogin.senha.value == '') {
+            document.getElementById('err').innerHTML = '';
+            document.getElementById("err").style.display = "block";
+            document.getElementById('err').innerHTML = 'Preencha o campo Senha';
+            document.frmLogin.senha.focus();
+        } else {
+            document.frmLogin.submit();
+        }
+
+        //window.location.href = '/admin'
+
+    },
+
+
+    login: function () {
         var tmpl = `
             <div class="container-login component">
                 <div class="content">
@@ -88,147 +209,41 @@ var functionHashi = {
         return tmpl
     },
 
-    login_action: function(){
-
-        if(document.frmLogin.email.value==''){
-            document.getElementById('err').innerHTML='';
-            document.getElementById("err").style.display = "block"; 
-            document.getElementById('err').innerHTML='Preencha o campo Email';
-            document.frmLogin.senha.focus();
-            return false;
-        }else if(document.frmLogin.senha.value==''){
-            document.getElementById('err').innerHTML='';
-            document.getElementById("err").style.display = "block"; 
-            document.getElementById('err').innerHTML='Preencha o campo Senha';
-            document.frmLogin.senha.focus();
-        }else{
-            document.frmLogin.submit();
-        }
-
-        //window.location.href = '/admin'
 
 
-    },
+    /********************* INICIO ESTRUTURA SOLUCOES ********************/
 
-    banner_action: function(){
-        dataImg.append('acao', 'upload');
-        dataImg.append('caminho', $('[data-id="files"]')[0].files[0]);
-        dataImg.append('link',  $('#link').val());
-        $('.status').append('Carregando...');
-
-        $.ajax({
-            url: 'banners/script_banners.php',
-            dataType: 'text', 
-            cache: false,
-            contentType: false,
-            processData: false,
-            data: dataImg,
-            type: 'post',
-            success: function(response) {
-                console.log(response)
-                $('.container-login').remove();
-                setTimeout(() => {
-                    window.location.reload()
-                }, 1000);
-            },
-            error: function(error){
-                console.log(error)
-            }
-        });
-    },
-
-    service_action: function(){
-        dataImg.append('acao', 'cadastrar');
+    service_action: function () {
+        dataImg.append('acao', 'cadastrarSolucao');
         dataImg.append('titulo', $('#titulo').val());
-        dataImg.append('descricao',  $('#descricao').val());
-        $('.status').append('Carregando...');
-
-        $.ajax({
-            url: 'banners/script_banners.php',
-            dataType: 'text', 
-            cache: false,
-            contentType: false,
-            processData: false,
-            data: dataImg,
-            type: 'post',
-            success: function(response) {
-                console.log(response)
-                $('.container-login').remove();
-                setTimeout(() => {
-                    window.location.reload()
-                }, 1000);
-            },
-            error: function(error){
-                console.log(error)
-            }
-        });
-    },
+        dataImg.append('descricao', $('#descricao').val());
+        dataImg.append('tipoSolucao', $('#tipoSolucao').val());
     
-    deleteImage_action: function(val, image){
-        //alert(image)
-        dataImg.append('acao', 'deletarImagem');
-        dataImg.append('pathImage',  ''+image+'');
-        dataImg.append('id',  ''+val+'');
-
-        $('.status').append('Carregando...');
-
-        $.ajax({
-            url: 'banners/script_banners.php',
-            dataType: 'text', 
-            cache: false,
-            contentType: false,
-            processData: false,
-            data: dataImg,
-            type: 'post',
-            success: function(response) {
-                console.log(response)
-                $('.container-login').remove();
-                setTimeout(() => {
-                    window.location.reload()
-                }, 1000);
-            },
-            error: function(error){
-                console.log(error)
-            }
-        });
-    },
-
-    close: function(){
-        $('.lightbox').remove()
-        $('.component').remove()
-    }, 
-/******************************************************BANNER */   
-    readURL: function(input) {
         
-        if (input.files && input.files[0]) {
-            var reader = new FileReader();
-            
-            if ( /\.(jpe?g|png|gif)$/i.test(input.files[0].name) ) {
-                reader.onload = function (e) {
-                    var img = new Image();
-                    img.src = e.target.result;
-                    
-                    img.onload = function() {
-                       
-                        if(this.width > 1000 && this.height > 450){                        
-                            $('#preview').attr('src', e.target.result);
-                        }else{
-                            $('[data-id="files"]').val('')
-                            alert('largura deve ser + 1000 e altura + 450')
-                        }
-                       
-                    };
-                   
-                }
-    
-                reader.readAsDataURL(input.files[0]);
-            }else{
-                alert('Escolha uma imagem')
+        $('.status').append('Carregando...');
+
+        $.ajax({
+            url: 'script.php',
+            dataType: 'text',
+            cache: false,
+            contentType: false,
+            processData: false,
+            data: dataImg,
+            type: 'post',
+            success: function (response) {
+                console.log(response)
+                $('.container-login').remove();
+                setTimeout(() => {
+                    window.location.reload()
+                }, 1000);
+            },
+            error: function (error) {
+                console.log(error)
             }
-        }
+        });
     },
-/******************************************************BANNER */
-    item: function(){
+
+    item: function () {
         var tmpl = `
             <div class="container-login component">
                 <div class="content">
@@ -237,10 +252,20 @@ var functionHashi = {
                     </div>
                         <form 
                         onSubmit="return false" 
-                        action="banners/script_banners.php?tipo=cadastrar"
+                        action="script.php?tipo=cadastrarSolucao"
                         method="post" 
-                        name="frmBanner"
-                        target="_self"> 
+                        name="frmSolucao"
+                        target="_self">  
+                        
+                            <div class="form-group">
+                            <label for="cars">Tipo:</label>
+                                <select id="tipoSolucao" name="tipoSolucao">
+                                <option value="">Selecione</option>
+                                <option value="0">Serviço</option>
+                                <option value="1">Produto</option>
+                                </select>                   
+                            </div> 
+
                             <div class="form-group">
                                 <label>Titulo: </label>
                                 <input type="type" id="titulo" placeholder="Outro nome" />
@@ -254,7 +279,7 @@ var functionHashi = {
                             <div class="form-group">
                                 <button type="submit" class="btn" value="Submit" name="acao" onclick="functionHashi.service_action()">
                                     <i class="fas fa-cloud-upload-alt"></i>
-                                    &nbsp; Envia
+                                    &nbsp; Enviar
                                 </button>
                              </div> 
 
@@ -265,52 +290,59 @@ var functionHashi = {
 
         return tmpl
     },
-/******************************************************AÇOES */
-    utils: function(){
+
+    /******************************************************AÇOES */
+
+    close: function () {
+        $('.lightbox').remove()
+        $('.component').remove()
+    },
+
+    utils: function () {
         $('.owl-carousel').owlCarousel({ items: 1 });
-        
-        $('[data-id="maneger-acoount"]').click(function(){
-            $('.main').append(functionHashi.login(),functionHashi.lightbox())
+
+        $('[data-id="maneger-acoount"]').click(function () {
+            $('.main').append(functionHashi.login(), functionHashi.lightbox())
         });
 
-        $('[data-id="banner"]').click(function(){
-            $('.main').append(functionHashi.banner(),functionHashi.lightbox());
+        $('[data-id="banner"]').click(function () {
+            $('.main').append(functionHashi.banner(), functionHashi.lightbox());
         });
 
-        $('[data-id="item"]').click(function(){
-            $('.main').append(functionHashi.item(),functionHashi.lightbox());
+        $('[data-id="item"]').click(function () {
+            $('.main').append(functionHashi.item(), functionHashi.lightbox());
         });
-          
+
         AOS.init({
             easing: 'ease-out-back',
             duration: 1000
         });
 
-        $(".sliding-link").click(function(e) {
+        $(".sliding-link").click(function (e) {
             e.preventDefault();
             var aid = $(this).attr("href");
-            $('html,body').animate({scrollTop: $(aid).offset().top},'slow');
+            $('html,body').animate({ scrollTop: $(aid).offset().top }, 'slow');
         });
 
-        $(document).on('click', function(event) {
+        $(document).on('click', function (event) {
             if ($(event.target).has('.content').length) {
                 $(".lightbox").remove();
                 $(".component").remove();
             }
         });
 
-        $('.bug').click(function(){
-            if($('.header').hasClass('openheader')){
+        $('.bug').click(function () {
+            if ($('.header').hasClass('openheader')) {
                 $('.header').removeClass('openheader')
-            }else{
+            } else {
                 $('.header').addClass('openheader')
             }
         });
 
-        $('.header ul li a').click(function(){
+        $('.header ul li a').click(function () {
             $('.header').addClass('openheader')
         });
-/******************************************************SCROLL */
+        /******************************************************SCROLL */
         $(window).bind('scroll', function () {
             if ($(window).scrollTop() > 122) {
                 $('.header').addClass('fixed');
@@ -324,6 +356,6 @@ var functionHashi = {
         } else {
             $('.header').removeClass('fixed');
         }
-/******************************************************SCROLL */
+        /******************************************************SCROLL */
     }
 }

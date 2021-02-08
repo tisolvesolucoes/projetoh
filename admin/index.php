@@ -64,10 +64,12 @@
                             while($info = $sql->fetch()){
                                 ?>
                                 <div class="content-image">
-                                    
                                     <div class="internal-content">
-                                        <img src="../<?php echo $info['nome'];?>" width="150" alt="" />
+                                        <a target="_blank" 
+                                        href="<?php echo $info['link'];?>">
+                                        <img src="../img/banners/<?php echo $info['nome'];?>" width="300" heigth="300" alt="" />
                                         <span><?php echo $info['link']; ?></span>
+                                        </a>
                                     </div>
 
                                     <button class="btn" onclick="
@@ -94,9 +96,9 @@
                 </div> 
 
                 <div class="elements">
-                    <div class="right owl-carousel">
+                    <div class="right "><!--owl-carousel-->
                         <?php
-                            $sql = $pdo->prepare("select * FROM tbl_solucoes");
+                            $sql = $pdo->prepare("SELECT * FROM `tbl_solucoes` ORDER BY 4 DESC ");
                             $sql->execute();
 
                             if($sql->rowCount() > 0){
