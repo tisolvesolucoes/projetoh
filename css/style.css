@@ -15,6 +15,7 @@ body{
     color: var(--color2);
     font-size: 1em;
     font-family: 'Montserrat', sans-serif;
+    
 }
 a{
     color: var(--color2);
@@ -39,7 +40,6 @@ h1 a img{
     justify-content: space-between;
     align-items: center;
     box-shadow: 0 1px 4px #ddd;
-
     -webkit-transition: all 0.5s ease;
     -moz-transition: position 10s;
     -ms-transition: position 10s;
@@ -49,6 +49,16 @@ h1 a img{
 .header h1{
     flex: 0;
 }
+
+h2{  
+    font-family: "Montserrat",Arial,Helvetica,sans-serif;
+    font-weight: 400;
+    text-transform: uppercase;
+    font-size: 28px;
+    line-height: 46px;
+    color: #eee7c6;
+ }
+
 .header .nav{
     display: flex;
     flex: 1;
@@ -198,12 +208,26 @@ h1 a img{
 .service .list-server li .content-card{
     padding: 5px;
 }
+
+.content-card-title h2{
+    padding: 5px 0;
+}
+
 .service .list-server li .content-card .content-card-title{
     padding: 5px 0;
 }
+
 .service .list-server li .content-card .content-card-main{
+    text-align: justify;
     padding: 5px 0;
 }
+
+.service .list-server li .content-card .content-card-main img{
+    border: 2px solid #eee7c6;;
+    border-radius: 10px;
+    align-items: center;
+}
+
 .service .list-server li .content-card .content-card-footer{
     padding: 5px 0;
 }
@@ -212,6 +236,7 @@ h1 a img{
 .container-item{
     padding: 20px 0;
     min-height: 300px; 
+    top: 100px;
 }
 .container-item:nth-child(even){
     background-color: var(--color0); /* #8a7816 */

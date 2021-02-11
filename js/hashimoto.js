@@ -301,7 +301,7 @@ var functionHashi = {
     utils: function () {
         $('.owl-carousel').owlCarousel({ items: 1 });
 
-        $('[data-id="maneger-acoount"]').click(function () {
+        $('[data-id="manager-acount"]').click(function () {
             $('.main').append(functionHashi.login(), functionHashi.lightbox())
         });
 

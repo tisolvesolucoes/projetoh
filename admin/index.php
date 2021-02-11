@@ -35,7 +35,7 @@
                 <div class="account">
                     <div class="user">                
                         <?php echo $_SESSION['usuario'] ?>                    
-                        <div data-id="maneger-acoount">
+                        <div data-id="manager-acount">
                             <a href="?sair">
                                 <i class="fas fa-sign-in-alt">
                             </i></a>
