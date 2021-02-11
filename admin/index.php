@@ -45,7 +45,7 @@
             </div>
         </div>
         
-        <section class="container-item">
+        <section class="container-banner">
             <div class="center load-elements">
                 <div class="elements">
                     <p>Adicionar imagem</p>
@@ -88,7 +88,7 @@
             </div> 
         </section>
        
-        <section class="container-item"> 
+        <section class="container-solucao"> 
             <div class="center load-elements">
                 <div class="elements">
                     <p>Adicionar item(serviço/produto)</p>

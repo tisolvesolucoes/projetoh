@@ -61,7 +61,7 @@ var functionHashi = {
 
         return tmpl
     },
-   /********************* INICIO ESTRUTURA BANNER ********************/
+ 
     banner_action: function () {
 
         dataImg.append('caminho', $('[data-id="files"]')[0].files[0]);
@@ -90,6 +90,8 @@ var functionHashi = {
         });
     },
    /********************* FIM CADASTRO BANNER ********************/
+
+
    /********************* INICIO DELETE BANNER ********************/
     deleteImage_action: function (val, image) {
         //alert(image)
@@ -209,6 +211,8 @@ var functionHashi = {
         return tmpl
     },
 
+    /********************* FIM ESTRUTURA LOGIN ********************/
+
 
 
     /********************* INICIO ESTRUTURA SOLUCOES ********************/
@@ -290,7 +294,7 @@ var functionHashi = {
 
         return tmpl
     },
-
+    /********************* FIM ESTRUTURA SOLUCOES ********************/
     /******************************************************AÇOES */
 
     close: function () {
