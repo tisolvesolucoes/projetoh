@@ -20,7 +20,7 @@ var functionHashi = {
     /********************* INICIO ESTRUTURA BANNER ********************/
     banner: function () {
         var tmpl = `
-            <div class="container-login component">
+            <div class="container component">
                 <div class="content">
                     <div class="close">
                         <button onclick="functionHashi.close()">x</button>
@@ -79,7 +79,7 @@ var functionHashi = {
             type: 'post',
             success: function (response) {
                 console.log(response)
-                $('.container-login').remove();
+                $('.container').remove();
                 setTimeout(() => { 
                    window.location.reload()
                 }, 1000);
@@ -111,7 +111,7 @@ var functionHashi = {
             type: 'post',
             success: function (response) {
                 console.log(response)
-                $('.container-login').remove();
+                $('.container').remove();
                 setTimeout(() => {
                     window.location.reload()
                 }, 1000);
@@ -181,7 +181,7 @@ var functionHashi = {
 
     login: function () {
         var tmpl = `
-            <div class="container-login component">
+            <div class="container component">
                 <div class="content">
                     <div class="close">
                         <button onclick="functionHashi.close()">x</button>
@@ -217,7 +217,7 @@ var functionHashi = {
 
     /********************* INICIO ESTRUTURA SOLUCOES ********************/
 
-    service_action: function () {
+    service_solucao_action: function () {
         dataImg.append('acao', 'cadastrarSolucao');
         dataImg.append('titulo', $('#titulo').val());
         dataImg.append('descricao', $('#descricao').val());
@@ -236,7 +236,7 @@ var functionHashi = {
             type: 'post',
             success: function (response) {
                 console.log(response)
-                $('.container-login').remove();
+                $('.container').remove();
                 setTimeout(() => {
                     window.location.reload()
                 }, 1000);
@@ -249,7 +249,7 @@ var functionHashi = {
 
     item: function () {
         var tmpl = `
-            <div class="container-login component">
+            <div class="container component">
                 <div class="content">
                     <div class="close">
                         <button onclick="functionHashi.close()">x</button>
@@ -281,7 +281,7 @@ var functionHashi = {
                             </div>
 
                             <div class="form-group">
-                                <button type="submit" class="btn" value="Submit" name="acao" onclick="functionHashi.service_action()">
+                                <button type="submit" class="btn" value="Submit" name="acao" onclick="functionHashi.service_solucao_action()">
                                     <i class="fas fa-cloud-upload-alt"></i>
                                     &nbsp; Enviar
                                 </button>
@@ -295,7 +295,89 @@ var functionHashi = {
         return tmpl
     },
     /********************* FIM ESTRUTURA SOLUCOES ********************/
-    /******************************************************AÇOES */
+   
+   /********************* INICIO ESTRUTURA CONTATO ********************/
+
+   service_contato_action: function () {
+    dataImg.append('acao', 'cadastrarContato');
+    dataImg.append('titulo', $('#titulo').val());
+    dataImg.append('descricao', $('#descricao').val());
+    dataImg.append('tipoSolucao', $('#tipoSolucao').val());
+
+    
+    $('.status').append('Carregando...');
+
+    $.ajax({
+        url: 'contato.php',
+        dataType: 'text',
+        cache: false,
+        contentType: false,
+        processData: false,
+        data: dataImg,
+        type: 'post',
+        success: function (response) {
+            console.log(response)
+            $('.container').remove();
+            setTimeout(() => {
+                window.location.reload()
+            }, 1000);
+        },
+        error: function (error) {
+            console.log(error)
+        }
+    });
+},
+
+contato: function () {
+    var tmpl = `
+        <div class="container component">
+            <div class="content">
+                <div class="close">
+                    <button onclick="functionHashi.close()">x</button>
+                </div>
+                    <form 
+                    onSubmit="return false" 
+                    action="contato.php?tipo=cadastrarContato"
+                    method="post" 
+                    name="frmContato"
+                    target="_self">  
+                    
+                        <div class="form-group">
+                        <label for="cars">Contato:</label>
+                            <select id="tipoSolucao" name="tipoSolucao">
+                            <option value="">Selecione</option>
+                            <option value="0">Serviço</option>
+                            <option value="1">Produto</option>
+                            </select>                   
+                        </div> 
+
+                        <div class="form-group">
+                            <label>Titulo: </label>
+                            <input type="type" id="titulo" placeholder="Outro nome" />
+                        </div>
+
+                        <div class="form-group">
+                            <label>Texto: </label>
+                            <textarea id="descricao"></textarea>
+                        </div>
+
+                        <div class="form-group">
+                            <button type="submit" class="btn" value="Submit" name="acao" onclick="functionHashi.service_contato_action()">
+                                <i class="fas fa-cloud-upload-alt"></i>
+                                &nbsp; Enviar
+                            </button>
+                         </div> 
+
+                        <div id="err" style="display:none;"></div>
+                    </form> 
+            </div>
+        </div>`;
+
+    return tmpl
+},
+/********************* FIM ESTRUTURA CONTATO ********************/
+
+/******************************************************AÇOES */
 
     close: function () {
         $('.lightbox').remove()
@@ -311,6 +393,10 @@ var functionHashi = {
 
         $('[data-id="banner"]').click(function () {
             $('.main').append(functionHashi.banner(), functionHashi.lightbox());
+        });
+
+        $('[data-id="contato"]').click(function () {
+            $('.main').append(functionHashi.contato(), functionHashi.lightbox());
         });
 
         $('[data-id="item"]').click(function () {

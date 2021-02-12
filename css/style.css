@@ -261,7 +261,7 @@ h2{
     z-index: 1;
 }
 /* COMPONENTE-LOGIN ********************************************/
-.container-login{
+.container{
     position: fixed;
     z-index: 2;
     left: 0;
@@ -272,7 +272,7 @@ h2{
     align-items: center;
     justify-content: center;
 }
-.container-login .content{
+.container .content{
     position: relative;
     background: var(--color1);
     padding: 20px;

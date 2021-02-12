@@ -28,7 +28,7 @@
                     <li> <a href="javascript:;">Sobre</a> </li>
                     <li> <a href="javascript:;">Soluções</a> </li>
                     <li> <a href="javascript:;">Preços</a> </li>
-                    <li> <a href="javascript:;">Contato</a> </li>
+                    <li> <a href="javascript:;" data-id="contato">Contato</a> </li>
         
                 </ul>
 
