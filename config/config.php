@@ -1,15 +1,16 @@
 <?php 
     session_start();
-    const host = 'localhost';
+    const host   = 'localhost';
     const dbname = 'hashimotolegal';
-    const user = 'root';
-    const senha = '';
+    const user   = 'root';
+    const senha  = '';
 
     //WEB
     //const host = 'mysql03-farm36.kinghost.net';
+    //const host   = 'mysql.hashimotolegal.com.br';
     //const dbname = 'hashimotolegal';
-    //const user = 'hashimotolegal';
-    //const senha = 'mkultrA954';
+    //const user   = 'hashimotolegal';
+    //const senha  = 'mkultrA954';
 
     try {
         $pdo = new PDO('mysql:host='.host.';dbname='.dbname.'', user, senha, [PDO::MYSQL_ATTR_INIT_COMMAND =>  "SET NAMES 'UTF8'"]);
