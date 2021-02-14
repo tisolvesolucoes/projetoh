@@ -1,6 +1,7 @@
 
 function limpaDiv() {
-    document.getElementById('err').innerHTML = '';
+    //document.getElementById('err').innerHTML = '';
+    document.getElementById("err").style.display = "none";
 }
 
 var dataImg = new FormData();
@@ -38,7 +39,7 @@ var functionHashi = {
                                 <label>Url:</label>
                                 <input type="text" name="link" id="link" />
                                 <label>Imagem: </label>
-                                <input type="file" data-id="files" name="file" id="file" onchange="functionHashi.readURL(this)" />
+                                <input type="file" accept="image/*" data-id="files" name="file" id="file" onchange="functionHashi.readURL(this)" />
                                 <input type="hidden" data-id="acao" name="acao" id="acao" value="upload" />
                             
                             </div>
@@ -121,6 +122,7 @@ var functionHashi = {
             }
         });
     },
+
     readURL: function (input) {
 
         if (input.files && input.files[0]) {
@@ -146,7 +148,7 @@ var functionHashi = {
 
                 reader.readAsDataURL(input.files[0]);
             } else {
-                alert('Escolha uma imagem')
+                alert('Escolha uma imagem!')
             }
         }
     },
@@ -173,9 +175,7 @@ var functionHashi = {
         } else {
             document.frmLogin.submit();
         }
-
         //window.location.href = '/admin'
-
     },
 
 
@@ -186,7 +186,13 @@ var functionHashi = {
                     <div class="close">
                         <button onclick="functionHashi.close()">x</button>
                     </div>
-                        <form action="admin/index.php" onsubmit="return false" onSubmit="limpaDiv();" method="post" name="frmLogin" id="frmLogin" target="_self"> 
+                        <form action="admin/index.php" 
+                        onsubmit="return false;" 
+                        onSubmit="limpaDiv();" 
+                        method="post" 
+                        name="frmLogin" 
+                        id="frmLogin" 
+                        target="_self"> 
                             <div class="form-group">
                                 <label>Email: </label>
                                 <input type="email" name="email" placeholder="email" placeholder="digite seu e-mail" maxlenght="50" />
@@ -210,13 +216,11 @@ var functionHashi = {
 
         return tmpl
     },
-
     /********************* FIM ESTRUTURA LOGIN ********************/
 
 
 
     /********************* INICIO ESTRUTURA SOLUCOES ********************/
-
     service_solucao_action: function () {
         dataImg.append('acao', 'cadastrarSolucao');
         dataImg.append('titulo', $('#titulo').val());
@@ -225,7 +229,6 @@ var functionHashi = {
     
         
         $('.status').append('Carregando...');
-
         $.ajax({
             url: 'script.php',
             dataType: 'text',
@@ -272,7 +275,7 @@ var functionHashi = {
 
                             <div class="form-group">
                                 <label>Titulo: </label>
-                                <input type="type" id="titulo" placeholder="Outro nome" />
+                                <input type="text" id="titulo" placeholder="Titulo" />
                             </div>
 
                             <div class="form-group">
@@ -286,9 +289,8 @@ var functionHashi = {
                                     &nbsp; Enviar
                                 </button>
                              </div> 
-
                             <div id="err" style="display:none;"></div>
-                        </form> 
+                        </form>
                 </div>
             </div>`;
 
@@ -296,37 +298,122 @@ var functionHashi = {
     },
     /********************* FIM ESTRUTURA SOLUCOES ********************/
    
+
    /********************* INICIO ESTRUTURA CONTATO ********************/
 
-   service_contato_action: function () {
-    dataImg.append('acao', 'cadastrarContato');
-    dataImg.append('titulo', $('#titulo').val());
-    dataImg.append('descricao', $('#descricao').val());
-    dataImg.append('tipoSolucao', $('#tipoSolucao').val());
-
+/*
+   validaContato: function () {
+    if (document.frmContato.nome.value == '') {
+        document.getElementById('err').innerHTML = '';
+        document.getElementById("err").style.display = "block";
+        document.getElementById('err').innerHTML = 'Preencha o campo nome';
+        document.frmContato.nome.focus();
+        return false;
+    } else  if (document.frmContato.telefone.value == '') {
+        document.getElementById('err').innerHTML = '';
+        document.getElementById("err").style.display = "block";
+        document.getElementById('err').innerHTML = 'Preencha o campo telefone';
+        document.frmContato.telefone.focus();
+        return false;
+    } 
+        else if (document.frmContato.email.value == '') {
+        document.getElementById('err').innerHTML = '';
+        document.getElementById("err").style.display = "block";
+        document.getElementById('err').innerHTML = 'Preencha o campo Email';
+        document.frmContato.email.focus();
+        return false;
     
-    $('.status').append('Carregando...');
+    } else  if (document.frmContato.assunto.value == '') {
+        document.getElementById('err').innerHTML = '';
+        document.getElementById("err").style.display = "block";
+        document.getElementById('err').innerHTML = 'Preencha o campo assunto';
+        document.frmContato.assunto.focus();
+        return false;
+    } else  if (document.frmContato.mensagem.value == '') {
+        document.getElementById('err').innerHTML = '';
+        document.getElementById("err").style.display = "block";
+        document.getElementById('err').innerHTML = 'Preencha o campo Mensagem';
+        document.frmContato.mensagem.focus();
+        return false;
+    } 
+    else 
+    {
+        
+        return true;
+        //document.frmContato.submit();
+    }
+},*/
 
-    $.ajax({
-        url: 'contato.php',
-        dataType: 'text',
-        cache: false,
-        contentType: false,
-        processData: false,
-        data: dataImg,
-        type: 'post',
-        success: function (response) {
-            console.log(response)
-            $('.container').remove();
-            setTimeout(() => {
-                window.location.reload()
-            }, 1000);
-        },
-        error: function (error) {
-            console.log(error)
-        }
-    });
-},
+   service_contato_action: function () {
+
+            if (document.frmContato.nome.value == '') {
+                document.getElementById('err').innerHTML = '';
+                document.getElementById("err").style.display = "block";
+                document.getElementById('err').innerHTML = 'Preencha o campo nome';
+                document.frmContato.nome.focus();
+                return false;
+            } else  if (document.frmContato.telefone.value == '') {
+                document.getElementById('err').innerHTML = '';
+                document.getElementById("err").style.display = "block";
+                document.getElementById('err').innerHTML = 'Preencha o campo telefone';
+                document.frmContato.telefone.focus();
+                return false;
+            } 
+                else if (document.frmContato.email.value == '') {
+                document.getElementById('err').innerHTML = '';
+                document.getElementById("err").style.display = "block";
+                document.getElementById('err').innerHTML = 'Preencha o campo Email';
+                document.frmContato.email.focus();
+                return false;
+            
+            } else  if (document.frmContato.assunto.value == '') {
+                document.getElementById('err').innerHTML = '';
+                document.getElementById("err").style.display = "block";
+                document.getElementById('err').innerHTML = 'Preencha o campo assunto';
+                document.frmContato.assunto.focus();
+                return false;
+            } else  if (document.frmContato.mensagem.value == '') {
+                document.getElementById('err').innerHTML = '';
+                document.getElementById("err").style.display = "block";
+                document.getElementById('err').innerHTML = 'Preencha o campo Mensagem';
+                document.frmContato.mensagem.focus();
+                return false;
+            } 
+            else 
+            {
+                //alert("1");
+                //return true;
+                //document.frmContato.submit();
+                dataImg.append('nome', $('#nome').val());
+                dataImg.append('telefone', $('#telefone').val());
+                dataImg.append('email', $('#email').val());
+                dataImg.append('assunto', $('#assunto').val());
+                dataImg.append('mensagem', $('#mensagem').val());
+                
+                $('.status').append('Carregando...');
+
+                $.ajax({
+                    url: 'admin/enviaEmail/enviar.php',
+                    dataType: 'text',
+                    cache: false,
+                    contentType: false,
+                    processData: false,
+                    data: dataImg,
+                    type: 'post',
+                    success: function (response) {
+                        console.log(response)
+                        $('.container').remove();
+                        setTimeout(() => {
+                            //window.location.reload()
+                            //window.location='/admin/enviaEmail/enviar.php';
+                        }, 1000);
+                    },
+                    error: function (error) {
+                        console.log(error)
+                    }
+                });
+            }
+    },
 
 contato: function () {
     var tmpl = `
@@ -336,29 +423,35 @@ contato: function () {
                     <button onclick="functionHashi.close()">x</button>
                 </div>
                     <form 
-                    onSubmit="return false" 
-                    action="contato.php?tipo=cadastrarContato"
+                    onSubmit="limpaDiv(); return false" 
+                    action="/admin/enviaEmail/enviar.php"
                     method="post" 
                     name="frmContato"
-                    target="_self">  
+                    target="_self">
+
+                    <div class="form-group">
+                        <label>Nome: <sup class="asteristico">*</sup></label>
+                        <input type="text" id="nome" name="nome" required  placeholder="Nome" />
+                    </div>
                     
-                        <div class="form-group">
-                        <label for="cars">Contato:</label>
-                            <select id="tipoSolucao" name="tipoSolucao">
-                            <option value="">Selecione</option>
-                            <option value="0">Serviço</option>
-                            <option value="1">Produto</option>
-                            </select>                   
-                        </div> 
+                    <div class="form-group">
+                        <label>Telefone: <sup class="asteristico">*</sup></label>
+                        <input type="text" id="telefone" required name="telefone" placeholder="Telefone" />
+                    </div>
+                    
+                    <div class="form-group">
+                        <label>Email:<sup class="asteristico">*</sup></label>
+                        <input type="email" id="email" required required name="email" placeholder="email" />
+                    </div>
+                    
+                    <div class="form-group">
+                        <label>Assunto:<sup class="asteristico">*</sup></label>
+                        <input type="text" id="assunto" name="assunto" required placeholder="assunto" />
+                    </div>
 
                         <div class="form-group">
-                            <label>Titulo: </label>
-                            <input type="type" id="titulo" placeholder="Outro nome" />
-                        </div>
-
-                        <div class="form-group">
-                            <label>Texto: </label>
-                            <textarea id="descricao"></textarea>
+                            <label>Mensagem:<sup class="asteristico">*</sup></label>
+                            <textarea id="mensagem" name="mensagem" required ></textarea>
                         </div>
 
                         <div class="form-group">
@@ -367,7 +460,6 @@ contato: function () {
                                 &nbsp; Enviar
                             </button>
                          </div> 
-
                         <div id="err" style="display:none;"></div>
                     </form> 
             </div>

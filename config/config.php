@@ -36,12 +36,16 @@
                 header("Location: index.php");
                 die();
             }else{
+                
                 //Erro
-                echo '<div class="box_erro_login"><p><i class="fas fa-exclamation-circle"></i> Usuário ou senha incorretos!</p></div>';
+                //echo "<script>alert('Usuário ou senha incorretos!')</script>";
+                //echo '<div class="box_erro_login"><p><i class="fas fa-exclamation-circle"></i> Usuário ou senha incorretos!</p></div>';
             }
         }else{
+
             //Erro
-            echo '<div class="box_erro_login"><p><i class="fas fa-exclamation-circle"></i> Usuário não encontrado.</p></div>';
+            //echo "<script>alert('Usuário não encontrado.')</script>";
+            //echo '<div class="box_erro_login"><p><i class="fas fa-exclamation-circle"></i> Usuário não encontrado.</p></div>';
         }
     }
 ?>

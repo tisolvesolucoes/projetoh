@@ -1,4 +1,5 @@
 <?php
+    include('./header.php'); 
     include('config/config.php');
     if(isset($_REQUEST['acao'])){
         $email = $_REQUEST['email'];
@@ -16,8 +17,9 @@
                 header("Location: admin.php");
                 die();
             }else{
+                
                 //Erro
-                echo '<div class="box_erro_login"><p><i class="fas fa-exclamation-circle"></i> Usuário ou senha incorretos!</p></div>';
+                //echo '<div class="box_erro_login"><p><i class="fas fa-exclamation-circle"></i> Usuário ou senha incorretos!</p></div>';
             }
         }else{
             //Erro
@@ -25,15 +27,7 @@
         }
     }
 ?>
-<!DOCTYPE html>
-<html lang="pt-BR">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" 
-    content="width=device-width, initial-scale=1.0">
-    <title>Hashimoto Legal</title>
 
-    <?php include('./header.php'); ?>
 
 </head>
 <body>

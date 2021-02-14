@@ -1,16 +1,12 @@
-<?php    
+    <?php 
+    include('./../header.php'); ?><?php    
     include('../config/main.php');
-    include('../config/config.php');//$_SERVER['SERVER_NAME'] .
+    include('../config/config.php');
+    //$_SERVER['SERVER_NAME'] .
     //$urlBanner = str_replace("index.php", "",  $_SERVER["REQUEST_URI"]);
 ?>
-<!DOCTYPE html>
-<html lang="pt-BR">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Hashimoto Legal</title>
 
-    <?php include('./../header.php'); ?>
+
 </head>
 <body>
 
