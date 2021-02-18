@@ -1,0 +1,454 @@
+#divChat  *
+{
+    border: none;
+}
+
+#divChat 
+{
+    font-family: Verdana, Geneva, sans-serif;
+    font-size: 12px;
+    color: #666;
+}
+
+#divChat .popover 
+{
+    position: relative;
+    top: 0;
+    left: 0;
+    z-index: 1060;
+    display: none;
+    max-width: 276px;
+    padding: 1px;
+    font-size: 14px;
+    font-weight: normal;
+    line-height: 1.42857143;
+    text-align: left;
+    white-space: normal;
+    background-color: #fff;
+    -webkit-background-clip: padding-box;
+    background-clip: padding-box;
+    border: 1px solid #ccc;
+    border: 1px solid rgba(0, 0, 0, .2);
+    border-radius: 6px;
+    -webkit-box-shadow: 0 5px 10px rgba(0, 0, 0, .2);
+    box-shadow: 0 5px 10px rgba(0, 0, 0, .2);
+}
+
+#divChat .popover.top 
+{
+    margin-top: -10px;
+}
+
+#divChat .popover.right 
+{
+    margin-left: 10px;
+}
+
+#divChat .popover.bottom 
+{
+    margin-top: 10px;
+}
+
+#divChat .popover.left 
+{
+    margin-left: -10px;
+}
+
+#divChat .popover-title 
+{
+    padding: 8px 14px;
+    margin: 0;
+    font-size: 14px;
+    background-color: #f7f7f7;
+    border-bottom: 1px solid #ebebeb;
+    border-radius: 5px 5px 0 0;
+}
+
+#divChat .popover-content 
+{
+    padding: 9px 14px;
+}
+
+#divChat .popover > .arrow,
+#divChat .popover > .arrow:after 
+{
+    position: absolute;
+    display: block;
+    width: 0;
+    height: 0;
+    border-color: transparent;
+    border-style: solid;
+}
+
+#divChat .popover > .arrow 
+{
+    border-width: 11px;
+}
+
+#divChat .popover > .arrow:after 
+{
+    content: "";
+    border-width: 10px;
+}
+
+#divChat .popover.top > .arrow 
+{
+    bottom: -11px;
+    left: 50%;
+    margin-left: -11px;
+    border-top-color: #999;
+    border-top-color: rgba(0, 0, 0, .25);
+    border-bottom-width: 0;
+}
+
+#divChat .popover.top > .arrow:after 
+{
+    bottom: 1px;
+    margin-left: -10px;
+    content: " ";
+    border-top-color: #fff;
+    border-bottom-width: 0;
+}
+
+#divChat .popover.right > .arrow 
+{
+    top: 50%;
+    left: -11px;
+    margin-top: -11px;
+    border-right-color: #999;
+    border-right-color: rgba(0, 0, 0, .25);
+    border-left-width: 0;
+}
+
+#divChat .popover.right > .arrow:after 
+{
+    bottom: -10px;
+    left: 1px;
+    content: " ";
+    border-right-color: #fff;
+    border-left-width: 0;
+}
+
+#divChat .popover.bottom > .arrow 
+{
+    top: -11px;
+    left: 50%;
+    margin-left: -11px;
+    border-top-width: 0;
+    border-bottom-color: #999;
+    border-bottom-color: rgba(0, 0, 0, .25);
+}
+
+#divChat .popover.bottom > .arrow:after 
+{
+    top: 1px;
+    margin-left: -10px;
+    content: " ";
+    border-top-width: 0;
+    border-bottom-color: #fff;
+}
+
+#divChat .popover.left > .arrow 
+{
+    top: 50%;
+    right: -11px;
+    margin-top: -11px;
+    border-right-width: 0;
+    border-left-color: #999;
+    border-left-color: rgba(0, 0, 0, .25);
+}
+
+#divChat .popover.left > .arrow:after 
+{
+    right: 1px;
+    bottom: -10px;
+    content: " ";
+    border-right-width: 0;
+    border-left-color: #fff;
+}
+
+#divChat button, #divChat input, #divChat optgroup, #divChat select, #divChat textarea 
+{
+    color: inherit;
+    margin: 0;
+}
+
+#divChat .form-control 
+{
+    color: #555;
+}
+
+#divChat .bloco-status.status-offline 
+{
+    position: fixed; 
+    right: 15px;
+    bottom: 0px; 
+    max-width: 300px; 
+    min-width: 180px; 
+    min-height: 30px; 
+    background: red none repeat scroll 0 0; 
+    text-align: center; 
+    border-top-left-radius: 5px; 
+    border-top-right-radius: 5px; 
+}
+
+#divChat .bloco-on-fechado
+{
+    position: fixed; 
+    right: 15px; 
+    bottom: 0px; 
+    max-width: 300px; 
+    min-width: 180px; 
+    height: 30px; 
+    background: #78a400 none repeat scroll 0 0; 
+    text-align: center; 
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px; 
+    cursor: pointer;
+}
+
+#divChat .bloco-on-fechado label
+{
+    font-family: Verdana,Geneva,sans-serif;
+    font-size: 12px; 
+    font-weight: bold;
+    line-height: 30px;
+    color: #ffffff;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+#divChat .bloco_on_mensagem, #divChat .bloco_on_dados
+{
+    background-color: #fff;
+    position: fixed; 
+    bottom: 0px; 
+    right: 15px; 
+    height: 400px; 
+    width: 300px; 
+    border-color: #ddd;
+    border-style: solid;
+    border-width: 0 1px; 
+    border-top-left-radius: 5px; 
+    border-top-right-radius: 5px; 
+    box-shadow: 0 0 3px 2px rgba(0, 0, 0, 0.1);
+}
+
+#divChat .bloco_on_mensagem .cabecalho,  #divChat .bloco_on_dados .cabecalho
+{
+    background-color: #78a400; 
+    height: 24px; 
+    text-align: center; 
+    border-top-left-radius: 5px; 
+    border-top-right-radius: 5px;
+}
+
+#divChat .bloco_on_mensagem .text-atendimento, #divChat .bloco_on_dados .text-atendimento
+{
+    color: #e7efd2; 
+    font-family: Verdana,Geneva,sans-serif; 
+    font-size: 12px; 
+    font-weight: bold;
+}
+
+#divChat .bloco_on_mensagem .cf_content, #divChat .bloco_on_dados .cf_content
+{
+    height: 295px; padding: 5px;    
+}
+
+#divChat .bloco_on_mensagem .divConversa
+{
+    background-color: #fff;
+    border: none;
+    border-radius: none;
+    box-shadow: none;
+    height: 310px;
+    overflow-x: auto;
+    padding-left: 15px;
+    padding-top: 5px;
+    text-align: left;
+}
+
+#divChat .bloco_on_mensagem .divConversa .limit
+{
+    float: left; display: block; 
+    background-clip: padding-box;
+    background-color: #fff;
+    border: 1px solid rgba(0, 0, 0, 0.2);
+    border-radius: 6px;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+    font-size: 14px;
+    font-weight: normal;
+    left: 0;
+    line-height: 1.42857;
+    max-width: 276px;
+    padding: 1px;
+    text-align: left;
+    top: 0;
+    white-space: normal;
+    z-index: 1060;
+}
+
+#divChat .bloco_on_mensagem .arrow
+{
+    border-left-width: 0;
+    border-right-color: rgba(0, 0, 0, 0.25);
+    left: -11px;
+    margin-top: -11px;
+    top: 50%;
+}
+
+#divChat .bloco_on_mensagem .divNomeConversa
+{
+    color: #686868;
+    float: left;
+    font-size: 0.7em;
+    font-weight: 700;
+}
+
+#divChat .bloco_on_mensagem .popover-content
+{
+    padding: 4px 14px;
+}
+
+#divChat .bloco_on_mensagem .triangle-border
+{
+    float: left; 
+    width: 100%; 
+    font-size: 0.8em;
+    margin-bottom: 3px;
+    max-width: 100%;
+    word-wrap: break-word;
+}
+
+#divChat .bloco_on_mensagem .footerMsg
+{
+    float: right;
+}
+
+#divChat .bloco_on_mensagem .horaMsg
+{
+    float: right;
+    font-size: 0.7em;
+    margin-left: 10px;
+    padding-top: 5px;
+}
+
+#divChat .bloco_on_mensagem .chatflutrodape
+{
+    height: 50px; 
+    border-top: #eee solid thin; 
+    padding-left: 20px;
+    padding-right: 20px; 
+    padding-top: 10px;
+}
+
+#divChat .chatflutrodape .input-mensagem
+{
+    -moz-appearance: none;
+    overflow: hidden;
+    padding: 6px 3px;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    word-wrap: normal; 
+    font-family: Verdana, Geneva, sans-serif;
+    font-size: 12px; 
+    width: 100%;
+}
+
+#divChat .bloco_on_dados .cf_content .limit
+{
+    padding: 20px;
+}
+
+#divChat .bloco_on_dados .lblDados
+{
+    display: block;
+    font-weight: bold;
+    margin-bottom: 5px; 
+    font-family: Verdana, Geneva, sans-serif;
+    font-size: 12px; 
+    color: #666;
+}
+
+#divChat .bloco_on_dados .input-dados
+{    
+    background: #fff none repeat scroll 0 0;
+    border-color: #ddd;
+    border-radius: 5px;
+    border-style: solid;
+    border-width: 1px;
+    display: block;
+    padding: 6px;
+    width: 100%; 
+    color: #8f0950;
+    font-style: italic; 
+    opacity: 1;
+    margin-bottom: 10px;
+}
+
+#divChat .bloco_on_dados .chatflutrodape
+{
+    height: 50px; 
+    border-top: #eee solid thin; 
+    padding-left: 20px;
+    padding-right: 20px; 
+    padding-top: 10px;
+}
+
+#divChat .bloco_on_dados .btEnviar
+{
+    -moz-appearance: none;
+    background: #78a400 none repeat scroll 0 0;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1), 0 1px 0 rgba(255, 255, 255, 0.25) inset;
+    color: #e7efd2;
+    cursor: pointer;
+    font-weight: bold;
+    overflow: hidden;
+    padding: 6px 3px;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    word-wrap: normal; 
+    font-family: Verdana, Geneva, sans-serif;
+    font-size: 12px; 
+    width: 100%;
+}
+
+#divChat #mensagem
+{
+    display: none;
+}
+
+#divChat .minimize
+{
+    height: 2px;
+    width: 10px;
+    background-color: #fff;
+    position: relative;
+    top: 10px;
+}
+
+#divChat #minimize
+{
+    height: 100%;
+    float: right;
+    cursor: pointer;
+    position: relative;
+    right: 5px;
+}
+
+#divChat .text-atendimento
+{
+    position: relative;
+    top: 3px;
+}
+
+#divChat
+{
+    z-index: 2147483648;
+}
+
+#divChat .cf_content, #divChat .chatflutrodape, #divChat .input-mensagem
+{
+    background-color: #fff;
+}
