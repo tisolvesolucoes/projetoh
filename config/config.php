@@ -1,5 +1,4 @@
 <?php 
-    session_start();
     const host   = 'localhost';
     const dbname = 'hashimotolegal';
     const user   = 'root';

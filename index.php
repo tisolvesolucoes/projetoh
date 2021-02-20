@@ -1,108 +1,9 @@
-<!DOCTYPE html>
-<html class="no-touch" prefix="og: http://ogp.me/ns#" lang="pt-BR">
 
-<head>
-	<meta http-equiv="content-type" content="text/html; charset=UTF-8">
-	
-	<script type="text/javascript" id="www-widgetapi-script" src="sitenovo_arquivos/www-widgetapi.js" async=""></script>
-	<meta charset="UTF-8">
+<?php
+    include('header.php'); 
+    include('config/config.php');
+?>
 
-	<title>Hashimoto Legal</title>
-
-	<link rel="canonical" href="https://www.hashimotolegal.com.br/">
-	<meta property="og:locale" content="pt-BR">
-	<meta property="og:type" content="website">
-	<meta property="og:title" content="Hashimoto Legal">
-	<meta property="og:url" content="https://www.hashimotolegal.com.br/">
-	<meta property="og:site_name" content="HashimotoLegal">
-	<meta name="twitter:card" content="summary">
-	<meta name="twitter:title" content="Hashimoto Legal">
-
-	<link rel="dns-prefetch" href="https://fonts.googleapis.com/">
-	<link rel="dns-prefetch" href="https://s.w.org/">
-	<link rel="alternate" type="application/rss+xml" title="hashimo tolegal » Feed"
-		href="https://www.hashimotolegal.com.br/feed/">
-	<link rel="alternate" type="application/rss+xml" title="Hashimoto Legal » Comments Feed"
-		href="https://www.hashimotolegal.com.br/comments/feed/">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<meta name="SKYPE_TOOLBAR" content="SKYPE_TOOLBAR_PARSER_COMPATIBLE">
-	<meta name="og:title" content="Home">
-	<meta name="og:type" content="website">
-	<meta name="og:url" content="https://www.hashimotolegal.com.br/">
-	
-	<style id="rs-plugin-settings-inline-css" type="text/css">
-		#rs-demo-id {}
-	</style>
-
-	<link rel="stylesheet" id="us-font-1-css" 
-	href="sitenovo_arquivos/css.css" type="text/css" media="all">
-	<link rel="stylesheet" id="recent-posts-widget-with-thumbnails-public-style-css" 
-	href="sitenovo_arquivos/public.css"
-		type="text/css" media="all">
-	<link rel="stylesheet" id="rpt_front_style-css" 
-	href="sitenovo_arquivos/front.css" type="text/css" media="all">
-	<link rel="stylesheet" id="us-base-css" 
-	href="sitenovo_arquivos/us-base.css" type="text/css" media="all">
-	<link rel="stylesheet" id="us-font-awesome-css" 
-	href="sitenovo_arquivos/font-awesome.css" type="text/css"
-		media="all">
-	<link rel="stylesheet" id="us-font-mdfi-css" 
-	href="sitenovo_arquivos/font-mdfi.css" type="text/css" media="all">
-	<link rel="stylesheet" id="us-style-css" 
-	href="sitenovo_arquivos/style.css" type="text/css" media="all">
-	<link rel="stylesheet" id="us-responsive-css" 
-	href="sitenovo_arquivos/responsive.css" type="text/css" media="all">
-	<link rel="stylesheet" id="bsf-Defaults-css" 
-	href="sitenovo_arquivos/Defaults.css" type="text/css" media="all">
-	<link rel="stylesheet" id="ultimate-style-min-css" 
-	href="sitenovo_arquivos/ultimate.css" type="text/css"
-		media="all">
-	
-			<link rel="stylesheet" id="ultimate-style-min-css" 
-	href="sitenovo_arquivos/arquivo.css" type="text/css"
-		media="all">
-
-
-	<script type="text/javascript" src="sitenovo_arquivos/jquery_002.js"></script>
-	
-	<link rel="shortlink" href="https://www.hashimotolegal.com.br/">
-
-	<link rel="apple-touch-icon" sizes="180x180" href="img/logo.png">
-	<link rel="icon" type="image/png" href="img/logo.png" sizes="32x32">
-	<link rel="icon" type="image/png" href="img/logo.png" sizes="16x16">
-
-	<link rel="shortcut icon" href="https://www.hashimotolegal.com.br/img/favicon.ico">
-	<meta name="theme-color" content="#ffffff">
-	<!--[if lte IE 9]><link rel="stylesheet" type="text/css" href="css/vc_lte_ie9.min.css" media="screen"><![endif]-->
-	<!--[if IE  8]><link rel="stylesheet" type="text/css" href="css/vc-ie8.min.css" media="screen"><![endif]-->
-	
-	<link rel="icon" href="img/logo.png" sizes="32x32">
-	<link rel="icon" href="img/logo.png" sizes="192x192">
-	<link rel="apple-touch-icon-precomposed" href="img/logo.png">
-	<meta name="msapplication-TileImage" content="img/logo.png">
-
-
-	<!-- BEGIN GADWP v5.2.3.1 Universal Analytics - https://deconf.com/google-analytics-dashboard-wordpress/ -->
-	
-	
-	<script>
-		(function (i, s, o, g, r, a, m) {
-			i['GoogleAnalyticsObject'] = r; i[r] = i[r] || function () {
-				(i[r].q = i[r].q || []).push(arguments)
-			}, i[r].l = 1 * new Date(); a = s.createElement(o),
-				m = s.getElementsByTagName(o)[0]; a.async = 1; a.src = g; m.parentNode.insertBefore(a, m)
-		})(window, document, 'script', 'https://www.google-analytics.com/analytics.js', 'ga');
-		ga('create', '0000000', 'auto');
-		ga('send', 'pageview');
-	</script>
-	<!-- END GADWP Universal Analytics -->
-	<noscript>
-		<style type="text/css">
-			.wpb_animate_when_almost_visible {
-				opacity: 1;
-			}
-		</style>
-	</noscript>
 </head>
 
 <body
@@ -367,13 +268,13 @@
 													<span
 														style="color: #ff6600;">
 															<strong>
-																Serviços Paralegais, Coworking e
-																BackOffice Online
+																Hashimoto Legal
 															</strong>
 														</span>
 												</h3>
 											</div>
 										</div>
+										<!--bolinha
 										<div class=" ubtn-ctn-center ">
 											<a class="ubtn-link ult-adjust-bottom-margin ubtn-center ubtn-large "
 												href="http://Hashimoto Legal.mysuite2.com.br/client/login.php?urlorigem=Hashimoto Legal.mysuite2.com.br"
@@ -394,7 +295,7 @@
 																</i>
 														</span>
 													<span class="ubtn-hover" style="background-color:"></span>
-													<span class="ubtn-data ubtn-text ">Acessar Conta</span>
+													<span class="ubtn-data ubtn-text ">Acessar Conta11</span>
 
 												</button>
 											</a>
@@ -417,10 +318,10 @@
 														<i class="Defaults-plus-circle"
 															style="font-size:32px;color:#ffffff;"></i></span>
 													<span class="ubtn-hover" style="background-color:"></span>
-													<span class="ubtn-data ubtn-text ">Cadastre-se</span>
+													<span class="ubtn-data ubtn-text ">Cadastre-se22</span>
 												</button>
 											</a>
-										</div>
+										</div>-->
 
 										<div
 											class="w-separator type_invisible size_huge thick_1 style_solid color_border cont_none">
@@ -440,6 +341,7 @@
 						style="position: relative; min-height: 526px;"
 						data-hide-row=" uvc_hidden-md  uvc_hidden-sm  uvc_hidden-xs  uvc_hidden-xsl " data-rtl="false"
 						data-row-effect-mobile-disable="true" data-upb_br_animation="">
+						<!--
 						<div class="upb_video-wrapper uvc-video-fixer">
 							<div class="upb_video-bg utube mb_YTPlayer isMuted" data-rtl="false" data-bg-override="0"
 								data-row="wpb_row" data-theme-support="" data-vdo="_h5uiV2bYNE" data-loop="true"
@@ -448,6 +350,7 @@
 								id="YTP_1613511721690">
 								<div class="mbYTP_wrapper" id="wrapper_mbYTP_YTP_1613511721690"
 									style="position: absolute; z-index: 0; min-width: 100%; min-height: 100%; left: 0px; top: 0px; overflow: hidden; opacity: 1; transition-property: opacity; transition-duration: 2000ms;">
+									
 									<iframe id="mbYTP_YTP_1613511721690" class="playerBox"
 										style="position: absolute; z-index: 0; width: 1772.76px; height: 859px; top: 0px; left: 0px; overflow: hidden; opacity: 1; user-select: none; margin-top: -61.5px; margin-left: -211.88px; transition-property: opacity; transition-duration: 1000ms;"
 										allowfullscreen="1"
@@ -465,7 +368,7 @@
 									style="background-image:url(https://xxx.com.br/wp-content/plugins/Ultimate_VC_Addons/modules/../assets/images/patterns/09.png); opacity:0.5; background-size:2px;; background-attachment:scroll;">
 								</div>
 							</div>
-						</div>
+						</div>-->
 						<div class="l-section-overlay" style="background-color: rgba(10,0,0,0.72)"></div>
 						<div class="l-section-h i-cf">
 							<div class="g-cols offset_small valign_middle">
@@ -491,7 +394,7 @@
 											<div class="wpb_wrapper">
 												<h1 style="text-align: center;">
 													<span style="color: #ff6600;">
-														Serviços Paralegais, Coworking e BackOffice Online
+														Hashimoto Legal
 													</span>
 												</h1>
 											</div>
@@ -525,7 +428,7 @@
 															style="font-size:32px;color:#ffffff;"></i></span>
 													<span class="ubtn-hover" style="background-color:"></span>
 													<span class="ubtn-data ubtn-text ">
-														Acessar Conta
+														Entre em Contato
 													</span>
 												</button>
 											</a>
@@ -536,6 +439,7 @@
 										</div>
 									</div>
 								</div>
+								<!--bolinha
 								<div class="vc_col-sm-6 wpb_column vc_column_container">
 									<div class="vc_column-inner">
 										<div
@@ -561,7 +465,7 @@
 														class="ubtn-data ubtn-icon"><i class="Defaults-plus-circle"
 															style="font-size:32px;color:#ffffff;"></i></span>
 													<span class="ubtn-hover" style="background-color:"></span>
-													<span class="ubtn-data ubtn-text ">Cadastre-se</span>
+													<span class="ubtn-data ubtn-text ">Cadastre-se22</span>
 												</button>
 											</a>
 										</div>
@@ -570,7 +474,7 @@
 											<span class="w-separator-h"></span>
 										</div>
 									</div>
-								</div>
+								</div>-->
 							</div>
 						</div>
 					</section><!-- Row Backgrounds -->
@@ -608,7 +512,7 @@
 									</div>
 								</div>
 								<div class="vc_col-sm-4 wpb_column vc_column_container">
-									<div class="vc_column-inner"><h2>Produtos</h2>
+									<div class="vc_column-inner"><h2>Certificado Digital</h2>
 										<div class="cl-ib animation_melete ratio_3x2 align_center with_title with_desc cl_custom_css_2"
 											style="width:100%;background-color:#444444;color:#ffffff;">
 											<div class="cl-ib-h easing_ease">
@@ -619,9 +523,8 @@
 												</div>
 												<div class="cl-ib-content" style="padding:10%;">
 													<div class="cl-ib-content-h">
-														<h4 class="cl-ib-title" style="font-size:30px;">Produtos</h4>
-														<div class="cl-ib-desc" style="font-size:16px;">Nós cuidamos do
-															seu negócio como se fosse o nosso negócio</div>
+														<h4 class="cl-ib-title" style="font-size:30px;">Certificado Digital</h4>
+														<div class="cl-ib-desc" style="font-size:16px;">Nós cuidamos da geração do seu Certificado Digital</div>
 													</div>
 												</div>
 											</div>
@@ -772,7 +675,8 @@
 																						serviços de secretariado,
 																						organização e gestão de
 																						documentos e serviços
-																						financeiros.</p>
+																						financeiros.
+																					</p>
 																				</div>
 																			</div>
 																		</div>
@@ -814,6 +718,7 @@
 							</div>
 						</div>
 					</section>
+
 					<section class="l-section wpb_row height_medium">
 						<div class="l-section-h i-cf">
 							<div class="g-cols offset_small">
@@ -831,8 +736,7 @@
 													regularização de seus negócios.<br>
 													O atendimento online flexibiliza a celeridade com os processos, os
 													consultores da Hashimoto Legal sempre disponível para nos auxiliar,
-													trazendo
-													maior
+													trazendo maior
 													tempo para eu cuidar dos assuntos jurídicos dos meus clientes…</div>
 												<div class="w-testimonial-person"><a class="w-person-link"
 														href="https://www.bvalaw.com.br/" target="_blank"
@@ -1176,6 +1080,8 @@
 		var _wpcf7 = { "recaptcha": { "messages": { "empty": "Please verify that you are not a robot." } } };
 /* ]]> */
 	</script>
+
+
 	<script type="text/javascript" src="sitenovo_arquivos/scripts.js"></script>
 	<script type="text/javascript" src="sitenovo_arquivos/jquery_003.js"></script>
 	<script type="text/javascript" src="sitenovo_arquivos/jquery.js"></script>
