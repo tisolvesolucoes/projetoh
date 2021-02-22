@@ -667,7 +667,7 @@ html {
 .no-touch .l-header.bg_transparent:not(.sticky) .type_desktop .menu-item-language>a:hover,
 .no-touch .l-header.bg_transparent:not(.sticky) .type_desktop .menu-item-language:hover>a,
 .no-touch .l-header.bg_transparent:not(.sticky) .type_desktop .w-nav-item.level_1:hover>.w-nav-anchor {
-    color: #043a73;
+    color: #eee7c6;
 }
 
 .l-header.bg_transparent:not(.sticky) .w-nav-title:after {
@@ -680,13 +680,14 @@ html {
 }
 
 .w-search.layout_fullscreen .w-search-form:before {
-    background-color: #ffffff;
+    background-color: #fff;
 }
 
 .no-touch .w-nav.type_desktop .menu-item-language:hover>a,
 .no-touch .w-nav-item.level_1:hover>.w-nav-anchor {
-    /*background-color: ;*/
+    /* background-color: ; */
     color: #043a73;
+''''
 }
 
 .w-nav-title:after {
@@ -993,7 +994,7 @@ a.w-btn.color_contrast.style_outlined,
 }
 
 a {
-    color: #043a73;
+    color: #eee7c6;
 }
 
 .no-touch a:hover,

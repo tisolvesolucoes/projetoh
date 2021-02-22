@@ -657,14 +657,14 @@ html {
 }
 
 .l-header.bg_transparent:not(.sticky) .l-subheader {
-    color: #ffffff;
+    color: #fff;
 }
 
 .no-touch .l-header.bg_transparent:not(.sticky) a:not(.w-nav-anchor):hover,
 .no-touch .l-header.bg_transparent:not(.sticky) .type_desktop .menu-item-language>a:hover,
 .no-touch .l-header.bg_transparent:not(.sticky) .type_desktop .menu-item-language:hover>a,
 .no-touch .l-header.bg_transparent:not(.sticky) .type_desktop .w-nav-item.level_1:hover>.w-nav-anchor {
-    color: #043a73;
+    color: #eee7c6;
 }
 
 .l-header.bg_transparent:not(.sticky) .w-nav-title:after {
@@ -1356,7 +1356,7 @@ p.bbp-topic-meta,
 }
 
 .color_alternate a {
-    color: #043a73;
+    color: #e7e994;
 }
 
 .no-touch .color_alternate a:hover,

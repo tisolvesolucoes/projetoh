@@ -18,13 +18,14 @@
 			<div class="l-subheader at_top">
 				<div class="l-subheader-h">
 					<div class="l-subheader-cell at_left">
-						<div class="w-text ush_text_2">
-							<div class="w-text-h"><i class="fa fa-phone"></i>
-								<span class="w-text-value">
-									11 2155-0074
-								</span>
-							</div>
-						</div>
+
+						<span class="w-text-value">
+							<a href="https://api.whatsapp.com/send?phone=5511992026569&text=BemVindoHashimotoLegal!!" target="_blank">
+								<img src="img/watzapp.png" style="width:40px;">
+							</a> 
+							<a href="tel:+55 11 99202-6569">11 99202 6569</a>
+						</span>
+
 						<div class="w-text ush_text_3">
 							<div class="w-text-h">
 								<i class="fa fa-envelope"></i>
@@ -1103,13 +1104,6 @@
 	<script type="text/javascript" src="sitenovo_arquivos/cl-ib.js"></script>
 	<script type="text/javascript" src="sitenovo_arquivos/jquery_006.js"></script>
 
-	<!--
-		<div style="width: 200px; height: 40px; bottom: 0px; position: fixed; left: 0px;" id="divChat">
-			<div class="bloco-status status-offline"> <label
-					style="font-family: Verdana,Geneva,sans-serif; font-size: 12px; font-weight: bold; line-height: 30px; color: #ffffff; font-weight: bold; ">Chat
-					Offline!</label> </div>
-		</div>
-	-->
 </body>
 
 </html>

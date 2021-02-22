@@ -59,11 +59,18 @@ template {
 	}
 a {
 	outline: 0;
-	text-decoration: none;
+	/*text-decoration: none;*/
 	background-color: transparent;
 	transition-property: background-color, box-shadow, border, color, opacity, transform;
-	transition-duration: 0.3s;
+	transition-duration: 0.5s;
+
 	}
+
+a:hover {
+	font-size: 20px!important;
+}
+	
+
 b,
 strong {
 	font-weight: bold;
