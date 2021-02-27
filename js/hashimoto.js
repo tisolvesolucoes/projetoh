@@ -486,7 +486,10 @@ contato: function () {
                       margin:10,
                       autoplay:true,
                       autoplayTimeout:3000,
-                      autoplayHoverPause:true
+                      autoplayHoverPause:true,
+                      nav:true,
+                      rewind:true,
+                      dots:true,
                   });
                   $('.play').on('click',function(){
                       owl.trigger('play.owl.autoplay',[1000])
