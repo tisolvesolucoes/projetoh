@@ -3,8 +3,15 @@
   <a href="#myPage" title="To Top">
     <span class="glyphicon glyphicon-chevron-up"></span>
   </a>
-  <p>Bootstrap Theme Made By <a href="https://www.w3schools.com" title="Visit w3schools">www.w3schools.com</a></p>
+    <p> 
+      ©Hashimoto Legal 2021 – </br>Todos os direitos reservados.
+    </p>
 </footer>
+<!-- Libs -->
+<!-- Hashimoto javascript --*>
+<script src="<?php //echo $path; ?>js/scripts.js"></script>
+-->
+
 
 <script>
 $(document).ready(function(){
@@ -51,10 +58,6 @@ $(document).ready(function(){
 <!-- Hashimoto javascript 
 <script src="<?php //echo $path; ?>js/hashimoto.js"></script>
 -->
-<script>
-    //functionHashi.utils();    
-</script>
-
     <!-- FOOTER -- >
     <footer class="l-footer layout_modern" itemscope="itemscope" itemtype="https://schema.org/WPFooter">
 

@@ -60,82 +60,80 @@
 
   <nav class="navbar navbar-default navbar-fixed-top">
     <div class="container">
-      <section>
-        <div class="subTop">
+      <div class="subTop row">
 
-            <div class="subheaderCellLeft col-md-6 col-sm-12">
-
-              <a href="https://api.whatsapp.com/send?phone=5511992026569&text=BemVindoHashimotoLegal!!" target="_blank">
-                <img src="img/watsapp.png" style="width:40px;">
-              </a>
-              <span class="text-value-fone">
-                <a href="tel:+55 11 99202-6569">11 99202 6569</a>
-              </span>
-            </div>
-
-            <div class="textEmail col-md-6 col-sm-12">
-                <i class="fa fa-envelope"></i>
-                <a class="text-value-email" href="mailto:atendimento@hashimotolegal.com.br">
-                  atendimento@hashimotolegal.com.br
+            <div class="subheaderCellLeft col-xs-12 col-md-6">
+              <div class="text-value-fone-img col-md-2">
+                <a href="https://api.whatsapp.com/send?phone=5511992026569&text=BemVindoHashimotoLegal!!" target="_blank">
+                  <img src="img/watsapp.png">
                 </a>
+              </div>
+                <span class="text-value-fone col-md-10">
+                  <a href="tel:+55 11 99202-6569">11 99202 6569</a>
+                </span>
             </div>
-        </div>
-        <!--
-					<div class="l-subheader-cell at_right">
-						
-						<div class="w-socials style_desaturated hover_default ush_socials_1">
-							<div class="w-socials-list">
-								<div class="w-socials-item facebook">
-									<a class="w-socials-item-link" target="_blank"
-										href="https://www.facebook.com/Hashimoto Legaloficial/">
-										<span class="w-socials-item-link-hover"></span>
-									</a>
-									<div class="w-socials-item-popup">
-										<span>Facebook</span>
-									</div>
-								</div>
-								<div class="w-socials-item linkedin">
-									<a class="w-socials-item-link" target="_blank"
-										href="">
-										<span class="w-socials-item-link-hover"></span>
-									</a>
-									<div class="w-socials-item-popup">
-										<span>LinkedIn</span>
-									</div>
-								</div>
-							</div>
-						</div>
-						
-					</div>
-					-->
-    </div>
-    </div>
-    </section>
-    <div class="navbar-header">
-      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-      </button>
 
-      <h1>
-        <a class="navbar-brand" href="#myPage">
-          <img src="./img/logo.jpeg" />
-        </a>
-        <span class="spanTexteira">Hashimoto Legal</span>
-      </h1>
+                <div class="text-value-email col-xs-12 col-md-6">
+                  <i class="fa fa-envelope"></i>
+                  <a class="text-value-email" href="mailto:atendimento@hashimotolegal.com.br">
+                    atendimento@hashimotolegal.com.br
+                  </a>
+                </div>
+            <!--
+              <div class="l-subheader-cell at_right">
+                
+                <div class="w-socials style_desaturated hover_default ush_socials_1">
+                  <div class="w-socials-list">
+                    <div class="w-socials-item facebook">
+                      <a class="w-socials-item-link" target="_blank"
+                        href="https://www.facebook.com/Hashimoto Legaloficial/">
+                        <span class="w-socials-item-link-hover"></span>
+                      </a>
+                      <div class="w-socials-item-popup">
+                        <span>Facebook</span>
+                      </div>
+                    </div>
+                    <div class="w-socials-item linkedin">
+                      <a class="w-socials-item-link" target="_blank"
+                        href="">
+                        <span class="w-socials-item-link-hover"></span>
+                      </a>
+                      <div class="w-socials-item-popup">
+                        <span>LinkedIn</span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                
+              </div>
+              -->
+      </div>
 
 
-    </div>
-    <div class="collapse navbar-collapse" id="myNavbar">
-      <ul class="nav navbar-nav navbar-right">
-        <li><a href="#myPage">Principal</a></li>
-        <li><a href="#quemSomos">Quem Somos</a></li>
-        <li><a href="#servicos">Serviços</a></li>
-        <li><a href="#contato">Contato</a></li>
-        <li><a href="#pricing">Área restríta</a></li>
-      </ul>
-    </div>
+          <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+            </button>
+
+            <h1>
+              <a class="navbar-brand" href="#myPage">
+                <img src="./img/logo.jpeg" />
+              </a>
+              <span class="spanTexteira">Hashimoto Legal</span>
+            </h1>
+          </div>
+
+            <div class="collapse navbar-collapse" id="myNavbar">
+              <ul class="nav navbar-nav navbar-right">
+                <li><a href="#myPage">Principal</a></li>
+                <li><a href="#quemSomos">Quem Somos</a></li>
+                <li><a href="#servicos">Serviços</a></li>
+                <li><a href="#contato">Contato</a></li>
+                <li><a  href="javascript:;" data-id="manager-acount">Área restríta</a></li>
+              </ul>
+            </div>
     </div>
   </nav>
   <!--
@@ -153,12 +151,16 @@
 </div>
 -->
 
+      <div class="arrumaBotao">
+          <button class="btn btn-default btn-lg">Entre em Contato</button>
+      </div>
+
   <!-- INICIO BANNER 
 
         <h2>What our customers say</h2>
     -->
   <div id="myCarousel" class="carousel slide text-center" data-ride="carousel">
-
+     
     <!-- Wrapper for slides -->
     <!-- INICIO DIV BANNER -->
     <div class="carousel-inner" role="listbox">
@@ -206,14 +208,10 @@
                    ?>
     </ol>
     <!-- FIM BOLINHAS -->
-
-
+     
   </div>
 
   <!-- FIM BANNER -->
-
-
-
 
   <!-- Container (About Section) -->
   <div id="quemSomos" class="container-fluid">
@@ -227,8 +225,9 @@
           magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
           consequat. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id
           est laborum consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
-          enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-        <br><button class="btn btn-default btn-lg">Get in Touch</button>
+          enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+        </p>
+   
       </div>
       <div class="col-sm-4">
         <span class="glyphicon glyphicon-signal logo"></span>
@@ -236,39 +235,23 @@
     </div>
   </div>
 
-  <div class="container-fluid bg-grey">
-    <div class="row">
-      <div class="col-sm-4">
-        <span class="glyphicon glyphicon-globe logo slideanim"></span>
-      </div>
-      <div class="col-sm-8">
-        <h2>Nossos Valores</h2><br>
-        <h4><strong>MISSÃO:</strong> Our mission lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-          tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
-          laboris nisi ut aliquip ex ea commodo consequat.</h4><br>
-        <p><strong>VISÃO:</strong> Our vision Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-          tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
-          laboris nisi ut aliquip ex ea commodo consequat.
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
-          magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-          consequat.</p>
-        <p><strong>VALORES:</strong> Our vision Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-          tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
-          laboris nisi ut aliquip ex ea commodo consequat.
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
-          magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-          consequat.</p>
-      </div>
-    </div>
-  </div>
-
   <!-- Container (Services Section) -->
   <div id="servicos" class="container-fluid text-center">
     <h2>SERVIÇOS</h2>
-    <h4>What we offer</h4>
+    <h4>Nossos Serviços</h4>
     <br>
     <div class="row slideanim">
-      <div class="col-sm-4">
+    <h4>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
+          dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
+          commodo consequat.</h4><br>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
+          magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+          consequat. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id
+          est laborum consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
+          enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+        </p>
+      <!--
+        <div class="col-sm-4">
         <span class="glyphicon glyphicon-off logo-small"></span>
         <h4>POWER</h4>
         <p>Lorem ipsum dolor sit amet..</p>
@@ -282,9 +265,10 @@
         <span class="glyphicon glyphicon-lock logo-small"></span>
         <h4>JOB DONE</h4>
         <p>Lorem ipsum dolor sit amet..</p>
-      </div>
+      </div>-->
     </div>
     <br><br>
+    <!--
     <div class="row slideanim">
       <div class="col-sm-4">
         <span class="glyphicon glyphicon-leaf logo-small"></span>
@@ -301,7 +285,7 @@
         <h4 style="color:#303030;">HARD WORK</h4>
         <p>Lorem ipsum dolor sit amet..</p>
       </div>
-    </div>
+    </div>-->
   </div>
 
   <!-- Container (Portfolio Section) --*>
@@ -366,7 +350,7 @@
   </div>--*>
 </div>-->
 
-  <!-- Container (Pricing Section) -->
+  <!-- Container (Pricing Section) --*>
   <div id="pricing" class="container-fluid">
     <div class="text-center">
       <h2>Pricing</h2>
@@ -431,17 +415,17 @@
         </div>
       </div>
     </div>
-  </div>
+  </div>-->
 
   <!-- Container (Contact Section) -->
   <div id="contato" class="container-fluid bg-grey">
     <h2 class="text-center">CONTATO</h2>
     <div class="row">
       <div class="col-sm-5">
-        <p>Contact us and we'll get back to you within 24 hours.</p>
-        <p><span class="glyphicon glyphicon-map-marker"></span> Chicago, US</p>
-        <p><span class="glyphicon glyphicon-phone"></span> +00 1515151515</p>
-        <p><span class="glyphicon glyphicon-envelope"></span> myemail@something.com</p>
+        <p>Entre em contato .</p>
+        <p><span class="glyphicon glyphicon-map-marker"></span> São Paulo, SP</p>
+        <p><span class="glyphicon glyphicon-phone"></span> 11 99202-6569</p>
+        <p><span class="glyphicon glyphicon-envelope"></span>atendimento@hashimotolegal.com.br</p>
       </div>
       <div class="col-sm-7 slideanim">
         <div class="row">
@@ -465,6 +449,9 @@
   <!-- Image of location/map -->
   <img src="/w3images/map.jpg" class="w3-image w3-greyscale-min" style="width:100%">
 
+  <?php include('./footer.php'); ?>
+
+<!--
   <footer class="container-fluid text-center">
     <a href="#myPage" title="To Top">
       <span class="glyphicon glyphicon-chevron-up"></span>
@@ -512,3 +499,5 @@
 </body>
 
 </html>
+
+  -->
