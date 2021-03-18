@@ -55,112 +55,16 @@
 
 ?>
 
-<body id="myPage" data-spy="scroll" data-target=".navbar" data-offset="60">
-
-
-  <nav class="navbar navbar-default navbar-fixed-top">
-    <div class="container">
-      <div class="subTop row">
-
-            <div class="subheaderCellLeft col-xs-12 col-md-6">
-              <div class="text-value-fone-img col-md-2">
-                <a href="https://api.whatsapp.com/send?phone=5511992026569&text=BemVindoHashimotoLegal!!" target="_blank">
-                  <img src="img/watsapp.png">
-                </a>
-              </div>
-                <span class="text-value-fone col-md-10">
-                  <a href="tel:+55 11 99202-6569">11 99202 6569</a>
-                </span>
-            </div>
-
-                <div class="text-value-email col-xs-12 col-md-6">
-                  <i class="fa fa-envelope"></i>
-                  <a class="text-value-email" href="mailto:atendimento@hashimotolegal.com.br">
-                    atendimento@hashimotolegal.com.br
-                  </a>
-                </div>
-            <!--
-              <div class="l-subheader-cell at_right">
-                
-                <div class="w-socials style_desaturated hover_default ush_socials_1">
-                  <div class="w-socials-list">
-                    <div class="w-socials-item facebook">
-                      <a class="w-socials-item-link" target="_blank"
-                        href="https://www.facebook.com/Hashimoto Legaloficial/">
-                        <span class="w-socials-item-link-hover"></span>
-                      </a>
-                      <div class="w-socials-item-popup">
-                        <span>Facebook</span>
-                      </div>
-                    </div>
-                    <div class="w-socials-item linkedin">
-                      <a class="w-socials-item-link" target="_blank"
-                        href="">
-                        <span class="w-socials-item-link-hover"></span>
-                      </a>
-                      <div class="w-socials-item-popup">
-                        <span>LinkedIn</span>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                
-              </div>
-              -->
-      </div>
-
-
-          <div class="navbar-header">
-            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
-              <span class="icon-bar"></span>
-              <span class="icon-bar"></span>
-              <span class="icon-bar"></span>
-            </button>
-
-            <h1>
-              <a class="navbar-brand" href="#myPage">
-                <img src="./img/logo.jpeg" />
-              </a>
-              <span class="spanTexteira">Hashimoto Legal</span>
-            </h1>
-          </div>
-
-            <div class="collapse navbar-collapse" id="myNavbar">
-              <ul class="nav navbar-nav navbar-right">
-                <li><a href="#myPage">Principal</a></li>
-                <li><a href="#quemSomos">Quem Somos</a></li>
-                <li><a href="#servicos">Serviços</a></li>
-                <li><a href="#contato">Contato</a></li>
-                <li><a  href="javascript:;" data-id="manager-acount">Área restríta</a></li>
-              </ul>
-            </div>
-    </div>
-  </nav>
-  <!--
-<div class="jumbotron text-center">
-  <h1>Company</h1> 
-  <p>We specialize in blablabla</p> 
-  <form>
-    <div class="input-group">
-      <input type="email" class="form-control" size="50" placeholder="Email Address" required>
-      <div class="input-group-btn">
-        <button type="button" class="btn btn-danger">Subscribe</button>
-      </div>
-    </div>
-  </form>
-</div>
--->
-
-      <div class="arrumaBotao">
-          <button class="btn btn-default btn-lg">Entre em Contato</button>
-      </div>
+  <div class="arrumaBotao">
+    <button class="btn btn-default btn-lg">Entre em Contato</button>
+  </div>
 
   <!-- INICIO BANNER 
 
         <h2>What our customers say</h2>
     -->
   <div id="myCarousel" class="carousel slide text-center" data-ride="carousel">
-     
+
     <!-- Wrapper for slides -->
     <!-- INICIO DIV BANNER -->
     <div class="carousel-inner" role="listbox">
@@ -208,12 +112,97 @@
                    ?>
     </ol>
     <!-- FIM BOLINHAS -->
-     
+
   </div>
 
   <!-- FIM BANNER -->
 
-  <!-- Container (About Section) -->
+  <section  class="container-fluid">
+
+<div class=" row">
+    <ul class="">
+        <li> 
+            <!--<div class="content-card col-xs-12 col-md-4">-->
+            <div class="bg-grey col-xs-12 col-md-4">
+                <div class="content-card-title">
+                <h4>Serviços</h4>
+                </div>
+                <div class="content-card-main">
+                    <img src="img/home/servicos.jpg">
+                <p>Lorem Ipsum é simplesmente uma simulação 
+                de texto da indústria tipográfica e de impressos, 
+                e vem sendo utilizado desde o século XVI, quando 
+                um impressor desconhecido pegou uma bandeja de tipos
+                e os embaralhou para fazer um livro de modelos de tipos. 
+                Lorem Ipsum sobreviveu não só a cinco séculos, como também 
+                ao salto para a editoração eletrônica, permanecendo 
+                essencialmente inalterado.Todos os geradores de Lorem Ipsum na internet tendem a repetir pedaços predefinidos conforme necessário. 
+                </p>
+                </div>
+                <div class="content-card-footer">
+                
+                </div>
+            </div>    
+        </li>
+
+        <li> 
+            <div class="bg-grey col-xs-12 col-md-4">
+                <div class="content-card-title">
+                <h4>Produtos</h4>
+                </div>
+                <div class="content-card-main">
+                <img src="img/home/produtos.jpg">
+                <p>Ao contrário do que se acredita, 
+                Lorem Ipsum não é simplesmente um 
+                texto randômico. Com mais de 2000 anos, 
+                suas raízes podem ser encontradas em uma
+                obra de literatura latina clássica datada 
+                de 45 AC. Richard McClintock, um professor 
+                de latim do Hampden-Sydney College na Virginia, 
+                pesquisou uma das mais obscuras palavras em latim, 
+                consectetur, oriunda de uma passagem de Lorem Ipsum, 
+                e, procurando por entre citações da palavra na literatura 
+                clássica, descobriu a sua indubitável origem.</p>
+                </div>
+                <div class="content-card-footer">
+                
+                </div>
+            </div>    
+        </li>
+
+        <li> 
+            <div class="bg-grey col-xs-12 col-md-4">
+                <div class="content-card-title">
+                <h4>Honorários</h4>
+                </div>
+                <div class="content-card-main">
+                <img src="img/home/tabela.jpg">
+                <p>Existem muitas variações disponíveis de 
+                passagens de Lorem Ipsum, mas a maioria 
+                sofreu algum tipo de alteração, seja por 
+                inserção de passagens com humor, ou palavras 
+                aleatórias que não parecem nem um pouco 
+                convincentes. Se você pretende usar uma 
+                passagem de Lorem Ipsum, precisa ter certeza 
+                de que não há algo embaraçoso escrito 
+                escondido no meio do texto. Todos os 
+                geradores de Lorem Ipsum na internet 
+                tendem a repetir pedaços predefinidos 
+                conforme necessário.
+                </p>
+                </div>
+                <div class="content-card-footer">
+                
+                </div>
+            </div>    
+        </li>
+    </ul>
+</div>
+<section>
+
+
+
+  <!-- Container (Quem Somos Section) -->
   <div id="quemSomos" class="container-fluid">
     <div class="row">
       <div class="col-sm-8">
@@ -227,13 +216,14 @@
           est laborum consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
           enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
         </p>
-   
+
       </div>
       <div class="col-sm-4">
         <span class="glyphicon glyphicon-signal logo"></span>
       </div>
     </div>
   </div>
+  <!-- Container (FIM CONTAINER QUEM SOMOS Section) -->
 
   <!-- Container (Services Section) -->
   <div id="servicos" class="container-fluid text-center">
@@ -241,181 +231,20 @@
     <h4>Nossos Serviços</h4>
     <br>
     <div class="row slideanim">
-    <h4>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
-          dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
-          commodo consequat.</h4><br>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
-          magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-          consequat. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id
-          est laborum consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
-          enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-        </p>
-      <!--
-        <div class="col-sm-4">
-        <span class="glyphicon glyphicon-off logo-small"></span>
-        <h4>POWER</h4>
-        <p>Lorem ipsum dolor sit amet..</p>
-      </div>
-      <div class="col-sm-4">
-        <span class="glyphicon glyphicon-heart logo-small"></span>
-        <h4>LOVE</h4>
-        <p>Lorem ipsum dolor sit amet..</p>
-      </div>
-      <div class="col-sm-4">
-        <span class="glyphicon glyphicon-lock logo-small"></span>
-        <h4>JOB DONE</h4>
-        <p>Lorem ipsum dolor sit amet..</p>
-      </div>-->
+      <h4>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
+        dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
+        commodo consequat.</h4><br>
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
+        magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+        consequat. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id
+        est laborum consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
+        enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+      </p>
+      
     </div>
     <br><br>
-    <!--
-    <div class="row slideanim">
-      <div class="col-sm-4">
-        <span class="glyphicon glyphicon-leaf logo-small"></span>
-        <h4>GREEN</h4>
-        <p>Lorem ipsum dolor sit amet..</p>
-      </div>
-      <div class="col-sm-4">
-        <span class="glyphicon glyphicon-certificate logo-small"></span>
-        <h4>CERTIFIED</h4>
-        <p>Lorem ipsum dolor sit amet..</p>
-      </div>
-      <div class="col-sm-4">
-        <span class="glyphicon glyphicon-wrench logo-small"></span>
-        <h4 style="color:#303030;">HARD WORK</h4>
-        <p>Lorem ipsum dolor sit amet..</p>
-      </div>
-    </div>-->
   </div>
 
-  <!-- Container (Portfolio Section) --*>
-<div id="portfolio" class="container-fluid text-center bg-grey">
-  <h2>Portfolio</h2><br>
-  <h4>What we have created</h4>
-  <div class="row text-center slideanim">
-    <div class="col-sm-4">
-      <div class="thumbnail">
-        <img src="paris.jpg" alt="Paris" width="400" height="300">
-        <p><strong>Paris</strong></p>
-        <p>Yes, we built Paris</p>
-      </div>
-    </div>
-    <div class="col-sm-4">
-      <div class="thumbnail">
-        <img src="newyork.jpg" alt="New York" width="400" height="300">
-        <p><strong>New York</strong></p>
-        <p>We built New York</p>
-      </div>
-    </div>
-    <div class="col-sm-4">
-      <div class="thumbnail">
-        <img src="sanfran.jpg" alt="San Francisco" width="400" height="300">
-        <p><strong>San Francisco</strong></p>
-        <p>Yes, San Fran is ours</p>
-      </div>
-    </div>
-  </div><br>
-  <!*--
-  <h2>What our customers say</h2>
-  <div id="myCarousel" class="carousel slide text-center" data-ride="carousel">
-    <!*-- Indicators --*>
-    <ol class="carousel-indicators">
-      <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
-      <li data-target="#myCarousel" data-slide-to="1"></li>
-      <li data-target="#myCarousel" data-slide-to="2"></li>
-    </ol>
-
-    <!*-- Wrapper for slides --*>
-    <div class="carousel-inner" role="listbox">
-      <div class="item active">
-        <h4>"This company is the best. I am so happy with the result!"<br><span>Michael Roe, Vice President, Comment Box</span></h4>
-      </div>
-      <div class="item">
-        <h4>"One word... WOW!!"<br><span>John Doe, Salesman, Rep Inc</span></h4>
-      </div>
-      <div class="item">
-        <h4>"Could I... BE any more happy with this company?"<br><span>Chandler Bing, Actor, FriendsAlot</span></h4>
-      </div>
-    </div>
-
-    <!*-- Left and right controls --*>
-    <a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
-      <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
-      <span class="sr-only">Previous</span>
-    </a>
-    <a class="right carousel-control" href="#myCarousel" role="button" data-slide="next">
-      <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
-      <span class="sr-only">Next</span>
-    </a>
-  </div>--*>
-</div>-->
-
-  <!-- Container (Pricing Section) --*>
-  <div id="pricing" class="container-fluid">
-    <div class="text-center">
-      <h2>Pricing</h2>
-      <h4>Choose a payment plan that works for you</h4>
-    </div>
-    <div class="row slideanim">
-      <div class="col-sm-4 col-xs-12">
-        <div class="panel panel-default text-center">
-          <div class="panel-heading">
-            <h1>Basic</h1>
-          </div>
-          <div class="panel-body">
-            <p><strong>20</strong> Lorem</p>
-            <p><strong>15</strong> Ipsum</p>
-            <p><strong>5</strong> Dolor</p>
-            <p><strong>2</strong> Sit</p>
-            <p><strong>Endless</strong> Amet</p>
-          </div>
-          <div class="panel-footer">
-            <h3>$19</h3>
-            <h4>per month</h4>
-            <button class="btn btn-lg">Sign Up</button>
-          </div>
-        </div>
-      </div>
-      <div class="col-sm-4 col-xs-12">
-        <div class="panel panel-default text-center">
-          <div class="panel-heading">
-            <h1>Pro</h1>
-          </div>
-          <div class="panel-body">
-            <p><strong>50</strong> Lorem</p>
-            <p><strong>25</strong> Ipsum</p>
-            <p><strong>10</strong> Dolor</p>
-            <p><strong>5</strong> Sit</p>
-            <p><strong>Endless</strong> Amet</p>
-          </div>
-          <div class="panel-footer">
-            <h3>$29</h3>
-            <h4>per month</h4>
-            <button class="btn btn-lg">Sign Up</button>
-          </div>
-        </div>
-      </div>
-      <div class="col-sm-4 col-xs-12">
-        <div class="panel panel-default text-center">
-          <div class="panel-heading">
-            <h1>Premium</h1>
-          </div>
-          <div class="panel-body">
-            <p><strong>100</strong> Lorem</p>
-            <p><strong>50</strong> Ipsum</p>
-            <p><strong>25</strong> Dolor</p>
-            <p><strong>10</strong> Sit</p>
-            <p><strong>Endless</strong> Amet</p>
-          </div>
-          <div class="panel-footer">
-            <h3>$49</h3>
-            <h4>per month</h4>
-            <button class="btn btn-lg">Sign Up</button>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>-->
 
   <!-- Container (Contact Section) -->
   <div id="contato" class="container-fluid bg-grey">
@@ -429,75 +258,49 @@
       </div>
       <div class="col-sm-7 slideanim">
         <div class="row">
-          <div class="col-sm-6 form-group">
-            <input class="form-control" id="name" name="name" placeholder="Name" type="text" required>
-          </div>
-          <div class="col-sm-6 form-group">
-            <input class="form-control" id="email" name="email" placeholder="Email" type="email" required>
-          </div>
+          <form onSubmit="limpaDiv(); return false" action="/admin/enviaEmail/enviar.php" method="post"
+            name="frmContato" target="_self">
+
+            <div class="form-group col-sm-12">
+              <label>Nome: <sup class="asteristico">*</sup></label>
+              <input type="text" id="nome" name="nome" required placeholder="Nome" />
+            </div>
+
+            <div class="form-group col-sm-12">
+              <label>Telefone: <sup class="asteristico">*</sup></label>
+              <input type="text" id="telefone" required name="telefone" placeholder="Telefone" />
+            </div>
+
+            <div class="form-group col-sm-12">
+              <label>Email:<sup class="asteristico">*</sup></label>
+              <input type="email" id="email" required required name="email" placeholder="email" />
+            </div>
+
+            <div class="form-group ">
+              <label>Assunto:<sup class="asteristico">*</sup></label>
+              <input type="text" id="assunto" name="assunto" required placeholder="assunto" />
+            </div>
+
+            <div class="form-group col-sm-12">
+              <label>Mensagem:<sup class="asteristico">*</sup></label>
+              <textarea id="mensagem" name="mensagem" required></textarea>
+            </div>
+
+            <div class="form-group col-sm-12">
+              <button type="submit" class="btn" value="Submit" name="acao"
+                onclick="functionHashi.service_contato_action()">
+                <i class="fas fa-cloud-upload-alt"></i>
+                &nbsp; Enviar
+              </button>
+            </div>
+            <div id="err" style="display:none;"></div>
+          </form>
         </div>
-        <textarea class="form-control" id="comments" name="comments" placeholder="Comment" rows="5"></textarea><br>
-        <div class="row">
-          <div class="col-sm-12 form-group">
-            <button class="btn btn-default pull-right" type="submit">Send</button>
-          </div>
-        </div>
+        
       </div>
     </div>
   </div>
 
   <!-- Image of location/map -->
-  <img src="/w3images/map.jpg" class="w3-image w3-greyscale-min" style="width:100%">
-
+  <iframe class="w3-image w3-greyscale-min" style="width:100%" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3658.0784321921515!2d-46.70029598502274!3d-23.529681284698615!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94cef8770aa85407%3A0xf626f220a8cd609f!2sR.%20Aur%C3%A9lia%2C%20882%20-%20Vila%20Romana%2C%20S%C3%A3o%20Paulo%20-%20SP%2C%2005046-000!5e0!3m2!1spt-BR!2sbr!4v1614470399838!5m2!1spt-BR!2sbr" height="300" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
   <?php include('./footer.php'); ?>
-
-<!--
-  <footer class="container-fluid text-center">
-    <a href="#myPage" title="To Top">
-      <span class="glyphicon glyphicon-chevron-up"></span>
-    </a>
-    <p>Bootstrap Theme Made By <a href="https://www.w3schools.com" title="Visit w3schools">www.w3schools.com</a></p>
-  </footer>
-
-  <script>
-    $(document).ready(function () {
-      // Add smooth scrolling to all links in navbar + footer link
-      $(".navbar a, footer a[href='#myPage']").on('click', function (event) {
-        // Make sure this.hash has a value before overriding default behavior
-        if (this.hash !== "") {
-          // Prevent default anchor click behavior
-          event.preventDefault();
-
-          // Store hash
-          var hash = this.hash;
-
-          // Using jQuery's animate() method to add smooth page scroll
-          // The optional number (900) specifies the number of milliseconds it takes to scroll to the specified area
-          $('html, body').animate({
-            scrollTop: $(hash).offset().top
-          }, 900, function () {
-
-            // Add hash (#) to URL when done scrolling (default click behavior)
-            window.location.hash = hash;
-          });
-        } // End if
-      });
-
-      $(window).scroll(function () {
-        $(".slideanim").each(function () {
-          var pos = $(this).offset().top;
-
-          var winTop = $(window).scrollTop();
-          if (pos < winTop + 600) {
-            $(this).addClass("slide");
-          }
-        });
-      });
-    })
-  </script>
-
-</body>
-
-</html>
-
-  -->

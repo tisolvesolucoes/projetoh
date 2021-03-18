@@ -1,5 +1,5 @@
     <?php 
-    include('./../header.php'); ?><?php    
+    include('./../header.php'); 
     include('../config/main.php');
     include('../config/config.php');
     //$_SERVER['SERVER_NAME'] .
@@ -7,14 +7,9 @@
 ?>
 
 
-</head>
-<body>
 
 <div class="main">
-
-        <div class="content-bug">
-            <button class="bug">prov</button>
-        </div>
+<!--
         <div class="header">
             <div class="center flex">
                 <h1><a href="../"><img src="../img/logo.jpeg" /></a></h1>
@@ -30,7 +25,7 @@
 
                 <div class="account">
                     <div class="user">                
-                        <?php echo $_SESSION['usuario'] ?>                    
+                        <?php //echo $_SESSION['usuario'] ?>                    
                         <div data-id="manager-acount">
                             <a href="?sair">
                                 <i class="fas fa-sign-in-alt">
@@ -39,8 +34,8 @@
                     </div>
                 </div>
             </div>
-        </div>
-        
+        </div>-->
+             
         <section class="container-banner">
             <div class="center load-elements">
                 <div class="elements">

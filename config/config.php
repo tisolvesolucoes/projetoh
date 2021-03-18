@@ -24,28 +24,28 @@
          $email = $_REQUEST['email'];
          $senha = $_REQUEST['senha'];
 
-        $sql = $pdo->prepare("SELECT * FROM tbl_usuario WHERE email = ?");
-        $sql->execute([$email]);
+        $sql = $pdo->prepare("SELECT * FROM tbl_usuario WHERE email = ? AND senha = ?");
+        $sql->execute([$email, $senha]);
 
-        if($sql->rowCount() == 1){
+        if($sql->rowCount() == 1){ 
             $info = $sql->fetch();
-            if(password_verify($senha, $info['senha'])){
                 $_SESSION['login'] = true;
                 $_SESSION['id'] = $info['idUsuario'];
                 $_SESSION['usuario'] = $info['nomeUsuario'];
+                
                 header("Location: index.php");
                 die();
-            }else{
+            //}else{
                 
                 //Erro
                 //echo "<script>alert('Usuário ou senha incorretos!')</script>";
                 //echo '<div class="box_erro_login"><p><i class="fas fa-exclamation-circle"></i> Usuário ou senha incorretos!</p></div>';
-            }
-        }else{
+            //}
+        }//else{
 
             //Erro
             //echo "<script>alert('Usuário não encontrado.')</script>";
             //echo '<div class="box_erro_login"><p><i class="fas fa-exclamation-circle"></i> Usuário não encontrado.</p></div>';
-        }
+       // }
     }
 ?>

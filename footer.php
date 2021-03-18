@@ -1,10 +1,9 @@
-
 <footer class="container-fluid text-center">
-  <a href="#myPage" title="To Top">
-    <span class="glyphicon glyphicon-chevron-up"></span>
-  </a>
-    <p> 
-      ©Hashimoto Legal 2021 – </br>Todos os direitos reservados.
+    <a href="#myPage" title="To Top">
+        <span class="glyphicon glyphicon-chevron-up"></span>
+    </a>
+    <p>
+        ©Hashimoto Legal 2021 – </br>Todos os direitos reservados.
     </p>
 </footer>
 <!-- Libs -->
@@ -13,44 +12,113 @@
 -->
 
 
+<!-- Modal -->
+<div class="modal fade" id="myModalFooter" role="dialog">
+
+    <div class="modal-dialog">
+
+        <!-- Modal content-->
+        <div class="modal-content">
+            <form action="admin/index.php" onsubmit="return false;" onSubmit="limpaDiv();" method="post" name="frmLogin"
+                id="frmLogin" target="_self">
+
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                    <div class="arrumaNomeLogin">
+                        <span class="glyphicon glyphicon-lock"></span>
+                        Login
+                    </div>
+                </div>
+                <div class="modal-body">
+                  
+                        <div class="form-group">
+                            <label for="usrname">
+                                <span class="glyphicon glyphicon-user"></span>
+                                E-mail
+                            </label>
+                            <input class="form-control" type="email" name="email" placeholder="email"
+                            required placeholder="digite seu e-mail" maxlenght="50" placeholder="Coloque o email">
+                        </div>
+                        <div class="form-group">
+                            <label for="psw"><span class="glyphicon glyphicon-eye-open"></span>Senha</label>
+                            <input class="form-control" placeholder="Coloque a senha" type="password" name="senha"
+                            required maxlenght="20" required >
+                        </div>
+                        
+                        <div id="err" style="display:none;"></div>
+                        
+                        <button 
+                        onclick="functionHashimoto.login_action()"
+                        type="submit" class="btn btn-success btn-block" name="acao">
+                            <span class="glyphicon glyphicon-off"></span>
+                            Acessar
+                        </button>
+           
+                </div>
+                <div class="modal-footer">
+                    <button type="submit" class="btn btn-danger btn-default pull-left" data-dismiss="modal">
+                        <span class="glyphicon glyphicon-remove"></span>
+                        Cancel
+                    </button>
+                </div>
+              
+            </form>
+        </div>
+    </div>
+</div>
+</div>
+
+
+
+
+
+
+
 <script>
-$(document).ready(function(){
-  // Add smooth scrolling to all links in navbar + footer link
-  $(".navbar a, footer a[href='#myPage']").on('click', function(event) {
-    // Make sure this.hash has a value before overriding default behavior
-    if (this.hash !== "") {
-      // Prevent default anchor click behavior
-      event.preventDefault();
+    $(document).ready(function () {
+        // Add smooth scrolling to all links in navbar + footer link
+        $(".navbar a, footer a[href='#myPage']").on('click', function (event) {
+            // Make sure this.hash has a value before overriding default behavior
+            if (this.hash !== "") {
+                // Prevent default anchor click behavior
+                event.preventDefault();
 
-      // Store hash
-      var hash = this.hash;
+                // Store hash
+                var hash = this.hash;
 
-      // Using jQuery's animate() method to add smooth page scroll
-      // The optional number (900) specifies the number of milliseconds it takes to scroll to the specified area
-      $('html, body').animate({
-        scrollTop: $(hash).offset().top
-      }, 900, function(){
-   
-        // Add hash (#) to URL when done scrolling (default click behavior)
-        window.location.hash = hash;
-      });
-    } // End if
-  });
-  
-  $(window).scroll(function() {
-    $(".slideanim").each(function(){
-      var pos = $(this).offset().top;
+                // Using jQuery's animate() method to add smooth page scroll
+                // The optional number (900) specifies the number of milliseconds it takes to scroll to the specified area
+                $('html, body').animate({
+                    scrollTop: $(hash).offset().top
+                }, 900, function () {
 
-      var winTop = $(window).scrollTop();
-        if (pos < winTop + 600) {
-          $(this).addClass("slide");
-        }
+                    // Add hash (#) to URL when done scrolling (default click behavior)
+                    window.location.hash = hash;
+                });
+            } // End if
+        });
+
+        $(window).scroll(function () {
+            $(".slideanim").each(function () {
+                var pos = $(this).offset().top;
+
+                var winTop = $(window).scrollTop();
+                if (pos < winTop + 600) {
+                    $(this).addClass("slide");
+                }
+            });
+        });
+    })
+
+    $("#myBtn").click(function () {
+        $("#myModalFooter").modal();
     });
-  });
-})
-</script>
 
+</script>
+<!-- Hashimoto javascript -->
+<script src="<?php echo $path; ?>js/scripts.js"></script>
 </body>
+
 </html>
 
 
@@ -58,7 +126,7 @@ $(document).ready(function(){
 <!-- Hashimoto javascript 
 <script src="<?php //echo $path; ?>js/hashimoto.js"></script>
 -->
-    <!-- FOOTER -- >
+<!-- FOOTER -- >
     <footer class="l-footer layout_modern" itemscope="itemscope" itemtype="https://schema.org/WPFooter">
 
         <!-- subfooter: top -- >

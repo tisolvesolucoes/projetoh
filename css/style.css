@@ -226,14 +226,13 @@ footer .glyphicon {
   }
 }
 
-
 .subTop {
-  color: #022547;
+  color: #fff;
   font-weight: bolder;
-  background-color: #fff;
 }
 .subTop a {
   text-decoration: underline;
+  color: #fff;
 }
 
 .arrumaBotao {
@@ -246,3 +245,63 @@ footer .glyphicon {
 .arrumaBotao .btn-lg {
     background-color: #10d216;
   }
+  
+  .content-card {
+    background-color: #7c0043;
+    color: #eee7c6;
+    border: 2px solid #eee7c6;;
+    border-radius: 10px;
+    font-weight: 500;
+  } 
+  .content-card h4{
+    color: #eee7c6; 
+  }
+  /********************INICIO MODAL********************************/
+  .modal-header, .close {
+    background-color: #5cb85c;
+    color:white !important;
+    text-align: center;
+    font-size: 20px;
+  }
+  .modal-footer {
+    background-color: #f9f9f9;
+  }
+  
+  .modal{
+    margin-top: 100px;
+}
+
+.modal-header {
+  height: 10px;
+  padding: 25px 50px;
+}
+
+.arrumaNomeLogin{
+  margin-top: -18px !important;
+}
+
+.close{
+  margin-top: -16px !important;
+  background-color: red;
+}
+
+  /********************FIM MODAL********************************/
+
+  
+#err{
+  padding: 5px;
+  border-style: dashed;
+  border-color: red;
+  border-width: 3px;
+  color: red;
+  border-radius: 4px;
+}
+
+.arrumaDivNome{
+  text-align: right;
+}
+
+.bg-grey {
+  border: 2px solid #003f7c;
+  border-radius: 10px;
+} 
