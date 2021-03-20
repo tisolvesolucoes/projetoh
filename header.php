@@ -4,7 +4,7 @@
 
 <head>
     <meta http-equiv="content-type" content="text/html; charset=UTF-8">
-    <title>Hashimoto Legal</title>
+    <title>Hashimoto Legalização</title>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
@@ -39,20 +39,21 @@
         <div class="container">
             <div class="subTop row">
 
+                <!--
                 <div class="subheaderCellLeft col-xs-12 col-md-6">
                     <div class="text-value-fone-img col-md-2">
                         <a href="https://api.whatsapp.com/send?phone=5511992026569&text=BemVindoHashimotoLegal!!"
                             target="_blank">
-                            <img src="<?php echo $path; ?>/img/watsapp.png">
+                            <img src="<?php //echo $path; ?>/img/watsapp.png">
                         </a>
                     </div>
                     <span class="text-value-fone col-md-10">
                         <a href="tel:+55 11 99202-6569">11 99202 6569</a>
                     </span>
-                </div>
+                </div>-->
 
-                <div class="text-value-email col-xs-12 col-md-6">
-                    <i class="fa fa-envelope"></i>
+                <div class="text-value-email col-md-12 ">
+                <span class="glyphicon glyphicon-envelope"></span>
                     <a class="text-value-email" href="mailto:atendimento@hashimotolegal.com.br">
                         atendimento@hashimotolegal.com.br
                     </a>
@@ -68,10 +69,8 @@
                     <?php  
                     }
                     ?>
-
             </div>
 
-              
             <div class="navbar-header">
                 <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
                     <span class="icon-bar"></span>
@@ -81,9 +80,9 @@
 
                 <h1>
                     <a class="navbar-brand" href="#myPage">
-                        <img src="<?php echo $path; ?>/img/logo.jpeg" />
+                        <img src="<?php echo $path; ?>img/logo.png" />
                     </a>
-                    <span class="spanTexteira">Hashimoto Legal</span>
+                    <span class="spanTexteira">Hashimoto Legalização</span>
                 </h1>
             </div>
 

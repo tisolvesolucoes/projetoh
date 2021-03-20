@@ -24,7 +24,7 @@ h4 {
   font-family: Montserrat, sans-serif;
 }
 .container-fluid {
-  padding: 60px 50px;
+  padding: 10px 20px;
 }
 .bg-grey {
   background-color: #f6f6f6;
@@ -42,10 +42,16 @@ h4 {
   font-weight: bolder;
   color: #fff;
 }
+
 .navbar-brand > img {
-  width: 36px;
-  padding-top: 0px !important;
+  width: 52px;
+  margin-top: -17px !important;
 }
+
+.logo-footer {
+  width: 52px;
+}
+
 .navbar-brand {
   padding-top: 0px !important;
 }
@@ -71,7 +77,7 @@ h4 {
 }
 
 .carousel {
-  margin-top: 90px;
+  margin-top: 65px;
 }
 
 .item h4 {
@@ -129,7 +135,7 @@ h4 {
   border: 0;
   font-size: 12px !important;
   line-height: 1.42857143 !important;
-  letter-spacing: 3px;
+  letter-spacing: 2px;
   border-radius: 0;
   font-family: Montserrat, sans-serif;
 }
@@ -160,18 +166,30 @@ h4 {
 }
 
 .text-value-email {
- 
+ font-size: 11px;
+  text-align: right;
 }
 
 .navbar-default .navbar-toggle {
   border-color: transparent;
   color: #fff !important;
 }
+
+.arrumaBotao {
+  margin-top: 300px;
+  position: absolute;
+  z-index: 3;
+  margin-left: 45%;
+}
+
+
+/*
 footer .glyphicon {
   font-size: 20px;
   margin-bottom: 20px;
   color: #022547;
 }
+*/
 .slideanim {visibility:hidden;}
 .slide {
   animation-name: slide;
@@ -200,6 +218,15 @@ footer .glyphicon {
     -webkit-transform: translateY(0%);
   }
 }
+
+@media screen and (max-width: 1024px) {
+  .arrumaBotao {    
+    margin-top: 70px;
+    margin-left: 40% !important;
+    z-index: 3!important;
+  }
+
+}
 @media screen and (max-width: 768px) {
   .col-sm-4 {
     text-align: center;
@@ -209,20 +236,25 @@ footer .glyphicon {
     width: 100%;
     margin-bottom: 35px;
   }
+  .arrumaBotao {    
+    margin-top: 80px;
+    margin-left: 40% !important;
+    z-index: 3!important;
+  }
+
 }
 @media screen and (max-width: 480px) {
   .logo {
     font-size: 150px;
   }  
   .carousel {
-    margin-top: 146px;
+    margin-top: 84px;
   }
 
-  .arrumaBotao {
-    margin-top: 150px !important;
-    position: absolute!important;
+  .arrumaBotao {    
+    margin-top: 30px;
+    margin-left: 30% !important;
     z-index: 3!important;
-    margin-left: 100px!important;
   }
 }
 
@@ -233,13 +265,6 @@ footer .glyphicon {
 .subTop a {
   text-decoration: underline;
   color: #fff;
-}
-
-.arrumaBotao {
-  margin-top: 800px ;
-  position: absolute;
-  z-index: 3;
-  margin-left: 590px;
 }
 
 .arrumaBotao .btn-lg {
@@ -304,4 +329,39 @@ footer .glyphicon {
 .bg-grey {
   border: 2px solid #003f7c;
   border-radius: 10px;
-} 
+}
+
+#arrumaFooter{
+margin-bottom: 0;
+background-color: #003f7c;
+z-index: 9999;
+border: 0;
+font-size: 12px !important;
+line-height: 1.42857143 !important;
+letter-spacing: 1px;
+border-radius: 0;
+font-family: Montserrat, sans-serif;    
+color: #fff;
+font-weight: 500;
+}
+
+.footer-default {
+  text-align: left !important;
+}
+ #arrumaFooter a {
+  text-decoration: underline;
+  color: #fff;
+  font-size: 12px;
+}
+
+#legal > h4 {
+  color: #fff;
+}
+
+#imgRedesSociais {
+  width: 40px;
+}
+
+#certificacaodigital {
+  width: 246px;
+}
